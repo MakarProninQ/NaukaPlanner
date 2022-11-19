@@ -1,0 +1,195 @@
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    z-index: 2;
+    height: 60px;
+    min-width: 820px;
+    width: 100%;
+    background: #FFFFFF;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 0px 0px 30px 30px;
+}
+
+.time-slot {
+    height: 45px;
+
+    background: #FFFFFF;
+    box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.04) inset;
+}
+
+body {
+    min-width: 820px;
+    overflow: hidden;
+    margin: 0;
+}
+
+#calendar-container {
+    padding-top: 60px;
+    display: grid;
+    height: 92vh;
+    grid-template-columns: auto repeat(7, 1fr);
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+
+#calendar-container::-webkit-scrollbar {
+    width: 15px;
+    background: rgb(255, 255, 255);
+}
+
+#calendar-container::-webkit-scrollbar-thumb {
+    background: #D9D9D9;
+    -webkit-border-radius: 7.5px;
+    -webkit-box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#calendar-container::-webkit-scrollbar-track-piece:start {
+    background: transparent;
+    margin-top: 60px;
+}
+
+#col-0 {
+    width: 75px;
+}
+
+.col-7 {
+    border-radius: 0px 22.5px 22.5px 0px;;
+}
+
+.col-0 {
+    font-family: 'Segoe UI';
+    font-style: normal;
+    font-weight: 350;
+    font-size: 24px;
+    line-height: 45px;
+    vertical-align: middle;
+    text-align: center;
+    letter-spacing: 0.2em;
+    
+    color: #000000;
+    
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.week-day {
+    font-family: 'Segoe UI';
+    font-weight: 350;
+    font-size: 18px;
+    line-height: 22.5px;
+    vertical-align: middle;
+    text-align: center;
+    letter-spacing: 0.2em;
+    
+    color: #881C1C;
+    
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.week-date {
+    font-family: 'Segoe UI';
+    font-weight: 350;
+    font-size: 18px;
+    line-height: 22.5px;
+    letter-spacing: 0.2em;
+    
+    color: #000000;
+    
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.row-0 {
+    vertical-align: middle;
+    text-align: center;
+}
+
+#slot-0-0 {
+    font-family: 'Segoe UI';
+    font-weight: 350;
+    font-size: 18px;
+    line-height: 22.5px;
+    vertical-align: middle;
+    text-align: center;
+    letter-spacing: 0.2em;
+    
+    color: #881C1C;
+    
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#highlight-cur-day {
+    position: relative;
+    bottom: 70%;
+    left: 20%;
+    z-index: 1;
+    width: 60%;
+    height: 40%;
+
+    background: rgba(136, 28, 28, 0.12);
+    box-shadow: 0px 0px 10px 10px rgba(136, 28, 28, 0.12);
+    border-radius: 10px;
+}
+
+#nauka-planner-name {
+    margin-left: 3.125%;
+    
+    font-family: 'Segoe UI';
+    font-style: italic;
+    font-weight: 200;
+    font-size: 48px;
+    line-height: 60px;
+    vertical-align: middle;
+    text-align: center;
+
+    color: #881C1C;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#suggestions-button {
+    width: 180px;
+    height: 45px;
+    margin-left: auto;
+    margin-right: 2.34%;
+
+    border-style: hidden;
+    background: #881C1C;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 22.5px;
+
+    font-family: 'Segoe UI';
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 45px;
+    vertical-align: middle;
+    text-align: center;
+    letter-spacing: 0.2em;
+
+    color: #FFFFFF;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#add-event-button {
+    width: 180px;
+    height: 45px;
+    margin-right: 2.34%;
+
+    border-style: hidden;
+    background: #881C1C;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 22.5px;
+
+    font-family: 'Segoe UI';
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 45px;
+    vertical-align: middle;
+    text-align: center;
+    letter-spacing: 0.2em;
+
+    color: #FFFFFF;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
