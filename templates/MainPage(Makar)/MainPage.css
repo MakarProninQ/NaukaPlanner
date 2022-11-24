@@ -1,102 +1,74 @@
-#header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: absolute;
-    z-index: 2;
-    height: 60px;
-    min-width: 820px;
-    width: 100%;
-    background: #FFFFFF;
-    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
-    border-radius: 0px 0px 30px 30px;
-}
-
-.time-slot {
-    height: 45px;
-
-    background: #FFFFFF;
-    box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.04) inset;
-}
-
 body {
-    min-width: 820px;
     overflow: hidden;
     margin: 0;
 }
 
-#calendar-container {
-    padding-top: 60px;
-    display: grid;
-    height: 92vh;
-    grid-template-columns: auto repeat(7, 1fr);
-    overflow-y: auto;
-    scroll-behavior: smooth;
-}
-
-#calendar-container::-webkit-scrollbar {
-    width: 15px;
+::-webkit-scrollbar {
+    width: 1vw;
     background: rgb(255, 255, 255);
 }
 
-#calendar-container::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
     background: #D9D9D9;
-    -webkit-border-radius: 7.5px;
-    -webkit-box-shadow: 1px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 0.5vw;
+    box-shadow: 0.15vh 0.6vh 0.6vh rgba(0, 0, 0, 0.25);
+    -webkit-border-radius: 0.5vw;
+    -webkit-box-shadow: 0.15vh 0.6vh 0.6vh rgba(0, 0, 0, 0.25);
 }
 
-#calendar-container::-webkit-scrollbar-track-piece:start {
-    background: transparent;
-    margin-top: 60px;
-}
 
-#col-0 {
-    width: 75px;
+.time-slot {
+    flex: 0 0 calc((91.6vh) / 16.5);
+
+    z-index: 0;
+    background: #FFFFFF;
+    box-shadow: 0.4vh 0.4vh 1.6vh rgba(0, 0, 0, 0.04);
 }
 
 .col-7 {
-    border-radius: 0px 22.5px 22.5px 0px;;
+    border-radius: 0px calc((91.6vh) / 33) calc((91.6vh) / 33) 0px;
 }
 
 .col-0 {
+    width: 6vw;
     font-family: 'Segoe UI';
     font-style: normal;
     font-weight: 350;
-    font-size: 24px;
-    line-height: 45px;
+    font-size: min(3.2vh, 1.3vw);
+    line-height: calc((91.6vh) / 16.5);
     vertical-align: middle;
     text-align: center;
     letter-spacing: 0.2em;
     
     color: #000000;
     
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    text-shadow: 0vh 0.42vh 0.42vh rgba(0, 0, 0, 0.25);
 }
 
 .week-day {
     font-family: 'Segoe UI';
     font-weight: 350;
-    font-size: 18px;
-    line-height: 22.5px;
+    font-size: min(2.6vh, 1.3vw);
+    line-height: calc((91.6vh) / 33);
     vertical-align: middle;
     text-align: center;
     letter-spacing: 0.2em;
     
     color: #881C1C;
     
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    text-shadow: 0vh 0.42vh 0.42vh rgba(0, 0, 0, 0.25);
 }
 
 .week-date {
     font-family: 'Segoe UI';
     font-weight: 350;
-    font-size: 18px;
-    line-height: 22.5px;
+    font-size: min(2.6vh, 1.3vw);
+    line-height: calc((91.6vh) / 33);
     letter-spacing: 0.2em;
     
     color: #000000;
     
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    text-shadow: 0vh 0.42vh 0.42vh rgba(0, 0, 0, 0.25);
 }
 
 .row-0 {
@@ -104,31 +76,61 @@ body {
     text-align: center;
 }
 
+.day-col {
+    width: calc((100vw - 6vw - 1vw ) / 7);
+}
+
+.column-grid {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: start;
+}
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    height: 8.4vh;
+    width: 100vw;
+    background: #FFFFFF;
+    box-shadow: 0.56vh 0.56vh 1.4vh rgba(0, 0, 0, 0.25);
+    border-radius: 0vh 0vh 4.2vh 4.2vh;
+}
+
+#calendar-container {
+    display: flex;
+    flex-direction: row-reverse;
+    height: 91.6vh;
+    justify-content: start;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+}
+
 #slot-0-0 {
     font-family: 'Segoe UI';
     font-weight: 350;
-    font-size: 18px;
-    line-height: 22.5px;
+    font-size: min(2.4vh, 1.3vw);
+    line-height: calc((91.6vh) / 33);
     vertical-align: middle;
     text-align: center;
     letter-spacing: 0.2em;
     
     color: #881C1C;
     
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    text-shadow: 0vh 0.42vh 0.42vh rgba(0, 0, 0, 0.25);
 }
 
 #highlight-cur-day {
     position: relative;
     bottom: 70%;
     left: 20%;
-    z-index: 1;
     width: 60%;
     height: 40%;
-
     background: rgba(136, 28, 28, 0.12);
-    box-shadow: 0px 0px 10px 10px rgba(136, 28, 28, 0.12);
-    border-radius: 10px;
+    box-shadow: 0vh 0vh 1vh 1vh rgba(136, 28, 28, 0.12);
+    border-radius: 1vh;
 }
 
 #nauka-planner-name {
@@ -137,59 +139,120 @@ body {
     font-family: 'Segoe UI';
     font-style: italic;
     font-weight: 200;
-    font-size: 48px;
-    line-height: 60px;
+    font-size: min(6.7vh, 5vw);
+    line-height: 8.4vh;
     vertical-align: middle;
     text-align: center;
 
     color: #881C1C;
 
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    text-shadow: 0vh 0.42vh 0.42vh rgba(0, 0, 0, 0.25);
 }
 
 #suggestions-button {
-    width: 180px;
-    height: 45px;
+    padding: 0vw;
+    width: 12vw;
+    height: min(6.3vh, 8vw);
     margin-left: auto;
-    margin-right: 2.34%;
+    margin-right: 2.34vw;
 
     border-style: hidden;
     background: #881C1C;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 22.5px;
+    box-shadow: 0vh 0.42vh 0.42vh rgba(0, 0, 0, 0.25);
+    border-radius: 3.15vh;
 
     font-family: 'Segoe UI';
     font-weight: 300;
-    font-size: 18px;
-    line-height: 45px;
+    font-size: min(1.4vw, 2.9vh);
+    line-height: min(3.15vh, 4vw);
     vertical-align: middle;
+    text-overflow: ellipsis;
     text-align: center;
     letter-spacing: 0.2em;
 
     color: #FFFFFF;
 
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    text-shadow: 0vh 0.42vh 0.42vh rgba(0, 0, 0, 0.25);
 }
 
 #add-event-button {
-    width: 180px;
-    height: 45px;
-    margin-right: 2.34%;
+    padding: 0vw;
+    width: 12vw;
+    height: min(6.3vh, 8vw);
+    margin-right: 2.34vw;
 
     border-style: hidden;
     background: #881C1C;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 22.5px;
+    box-shadow: 0vh 0.42vh 0.42vh rgba(0, 0, 0, 0.25);
+    border-radius: 3.15vh;
 
     font-family: 'Segoe UI';
     font-weight: 300;
-    font-size: 18px;
-    line-height: 45px;
-    vertical-align: middle;
+    font-size: min(1.4vw, 2.9vh);
+    line-height: min(3.15vh, 4vw);
+    vertical-align: top;
     text-align: center;
     letter-spacing: 0.2em;
 
     color: #FFFFFF;
 
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    text-shadow: 0vh 0.42vh 0.42vh rgba(0, 0, 0, 0.25);
+}
+
+.event-text {
+    position: relative;
+    font-family: 'Segoe UI';
+    font-weight: 350;
+    font-size: min(2.4vh, 1.3vw);
+    line-height: calc((91.6vh) / 33);
+    vertical-align: middle;
+    text-align: center;
+    letter-spacing: 0.2em;
+    
+    color: #000000;
+    
+    text-shadow: 0vh 0.42vh 0.42vh rgba(0, 0, 0, 0.25);
+}
+
+.event-start {
+    margin: 0 auto 0;
+    width: 96%;
+    height: 75%;
+    position: relative;
+    border-bottom: hidden !important;
+    border-radius: calc((91.6vh) / 33) calc((91.6vh) / 33) 0 0;
+}
+
+.event-middle {
+    margin: 0 auto 0;
+    width: 96%;
+    position: relative;
+    border-top: hidden !important;
+    border-bottom: hidden !important;
+}
+
+.event-end {
+    margin: 0 auto 0;
+    width: 96%;
+    height: 50%;
+    position: relative;
+    border-top: hidden !important;
+    border-radius: 0 0 calc((91.6vh) / 33) calc((91.6vh) / 33);
+}
+
+.class-event {
+    border: 1px solid #00C7A3;
+    filter: drop-shadow(0vh 0.42vh 0.42vh rgba(0, 199, 163, 0.5));
+}
+
+.suggestion {
+
+}
+
+.other {
+
+}
+
+.deadline {
+    
 }
