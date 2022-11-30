@@ -245,14 +245,14 @@ body {
     filter: drop-shadow(0vh 0.42vh 0.42vh rgba(0, 199, 163, 0.5));
 }
 
-.suggestion {
+.suggestion-event {
 
 }
 
-.other {
+.other-event {
 
 }
 
-.deadline {
+.deadline-event {
     
 }

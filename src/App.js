@@ -1,24 +1,14 @@
-import logo from './logo.svg';
 import './App.css';
+import MainPageElem from "./components/mainPage/MainPageElem";
+
+const regEvent = {id: "2b34", type: "class", name: "Learn React", startTime: "12:15", startDate: "2022-11-30",
+endTime: "16:45", endDate: "2022-11-30"};
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div className="app-container">
+        <MainPageElem regEventsArr={[regEvent]} weekNum={0}/>
+      </div>
   );
 }
 

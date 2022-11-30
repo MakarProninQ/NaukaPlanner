@@ -1,0 +1,531 @@
+#nameT{
+    position: absolute;
+    width: 220px;
+    height: 60px;
+    left: 20px;
+    top: 10px;
+    
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 20;
+    font-size: 20px;
+    line-height: 10px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.1em;
+    
+    color: #000000;
+    
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+#name{
+    position: absolute;
+    width: 200px;
+    height: 30px;
+    left: 150px;
+    top: 20px;
+    
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 20;
+    font-size: 20px;
+    line-height: 8px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    
+    color: #6C6C6C;
+    
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+}
+#typeT{
+    position: absolute;
+    width: 220px;
+    height: 60px;
+    left: 20px;
+    top: 80px;
+    
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 20;
+    font-size: 20px;
+    line-height: 10px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.1em;
+    
+    color: #000000;
+    
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+#type{
+    position: absolute;
+    width: 200px;
+    height: 30px;
+    left: 150px;
+    top: 90px;
+    
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 20;
+    font-size: 20px;
+    line-height: 8px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    
+    color: #6C6C6C;
+    
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+}
+#timeT{
+    position: absolute;
+    width: 220px;
+    height: 60px;
+    left: 20px;
+    top: 150px;
+    
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 20;
+    font-size: 20px;
+    line-height: 10px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.1em;
+    
+    color: #000000;
+    
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+input[name="startTime"]{
+    position: absolute;
+    width: 200px;
+    height: 30px;
+    left: 150px;
+    top: 160px;
+    
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 20;
+    font-size: 20px;
+    line-height: 8px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    
+    color: #6C6C6C;
+    
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+}
+#timeDash{
+    position: absolute;
+    width: 10px;
+    left: 375px;
+    height: 30px;
+    top: 160px;
+    
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 20;
+    font-size: 20px;
+    line-height: 8px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    
+    color: #6C6C6C;
+    
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+input[name="endTime"]{
+    position: absolute;
+    width: 200px;
+    height: 30px;
+    left: 400px;
+    top: 160px;
+    
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 20;
+    font-size: 20px;
+    line-height: 8px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    
+    color: #6C6C6C;
+    
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+}
+#dayT{
+    position: absolute;
+    width: 220px;
+    height: 60px;
+    left: 20px;
+    top: 220px;
+    
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 20;
+    font-size: 20px;
+    line-height: 10px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.1em;
+    
+    color: #000000;
+    
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+#sunday{
+    position: absolute;
+    top: 240px;
+    left: 150px;
+    visibility: hidden;
+}
+#monday{
+    position: absolute;
+    top: 240px;
+    left: 190px;
+    visibility: hidden;
+}
+#tuesday{
+    position: absolute;
+    top: 240px;
+    left: 230px;
+    visibility: hidden;
+}
+#wednesday{
+    position: absolute;
+    top: 240px;
+    left: 270px;
+    visibility: hidden;
+}
+#thursday{
+    position: absolute;
+    top: 240px;
+    left: 310px;
+    visibility: hidden;
+}
+#friday{
+    position: absolute;
+    top: 240px;
+    left: 350px;
+    visibility: hidden;
+}
+#saturday{
+    position: absolute;
+    top: 240px;
+    left: 390px;
+    visibility: hidden;
+}
+#sundayT{
+    position: absolute;
+    top: 240px;
+    left: 150px;
+}
+#mondayT{
+    position: absolute;
+    top: 240px;
+    left: 190px;
+}
+#tuesdayT{
+    position: absolute;
+    top: 240px;
+    left: 230px;
+}
+#wednesdayT{
+    position: absolute;
+    top: 240px;
+    left: 270px;
+}
+#thursdayT{
+    position: absolute;
+    top: 240px;
+    left: 310px;
+}
+#fridayT{
+    position: absolute;
+    top: 240px;
+    left: 350px;
+}
+#saturdayT{
+    position: absolute;
+    top: 240px;
+    left: 390px;
+}
+#sunday:checked ~ label[for="sunday"],
+#monday:checked ~ label[for="monday"],
+#tuesday:checked ~ label[for="tuesday"],
+#wednesday:checked ~ label[for="wednesday"],
+#thursday:checked ~ label[for="thursday"],
+#friday:checked ~ label[for="friday"],
+#saturday:checked ~ label[for="saturday"] {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    color: black;
+}
+
+input[type="checkbox"] + label{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    border: 1px solid #ddd;
+    line-height: 30px;
+    cursor: pointer;
+    
+    font-family: 'Inter';
+    font-style: italic;
+    border-radius: 100%;
+
+    color: #6C6C6C;
+}
+
+#weekT{
+    position: absolute;
+    width: 220px;
+    height: 60px;
+    left: 20px;
+    top: 290px;
+    
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 20;
+    font-size: 20px;
+    line-height: 10px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.1em;
+    
+    color: #000000;
+    
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+input[name="startdate"]{
+    position: absolute;
+    width: 200px;
+    height: 30px;
+    left: 150px;
+    top: 300px;
+    
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 20;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    
+    color: #6C6C6C;
+    
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+}
+#weekDash{
+    position: absolute;
+    width: 10px;
+    left: 375px;
+    height: 30px;
+    top: 300px;
+    
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 20;
+    font-size: 20px;
+    line-height: 8px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    
+    color: #6C6C6C;
+    
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+input[name="enddate"]{
+    position: absolute;
+    width: 200px;
+    height: 30px;
+    left: 400px;
+    top: 300px;
+    
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 20;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    
+    color: #6C6C6C;
+    
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+}
+#locationT{
+    position: absolute;
+    width: 220px;
+    height: 60px;
+    left: 20px;
+    top: 360px;
+    
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 20;
+    font-size: 20px;
+    line-height: 10px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.1em;
+    
+    color: #000000;
+    
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+#location{
+    position: absolute;
+    width: 200px;
+    height: 30px;
+    left: 150px;
+    top: 370px;
+    
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 20;
+    font-size: 20px;
+    line-height: 8px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    
+    color: #6C6C6C;
+    
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+}
+#linkT{
+    position: absolute;
+    width: 220px;
+    height: 60px;
+    left: 20px;
+    top: 430px;
+    
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 20;
+    font-size: 20px;
+    line-height: 10px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.1em;
+    
+    color: #000000;
+    
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+#link{
+    position: absolute;
+    width: 200px;
+    height: 30px;
+    left: 150px;
+    top: 440px;
+    
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 20;
+    font-size: 20px;
+    line-height: 8px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    
+    color: #6C6C6C;
+    
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+}
+#noteT{
+    position: absolute;
+    width: 220px;
+    height: 60px;
+    left: 20px;
+    top: 500px;
+    
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 20;
+    font-size: 20px;
+    line-height: 10px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.1em;
+    
+    color: #000000;
+    
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+#note{
+    position: absolute;
+    width: 500px;
+    height: 300px;
+    left: 150px;
+    top: 510px;
+    
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 20;
+    font-size: 20px;
+    line-height: 1.5;
+    padding: 10px;
+    display: flex;
+    color: #6C6C6C;
+
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+
+#cancel{
+    position: absolute;
+    top:850px;
+    left: 20px;
+    width: 150px;
+    height: 50px;
+
+    background: #881C1C;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+}
+#delete{
+    position: absolute;
+    top:850px;
+    left: 250px;
+    width: 150px;
+    height: 50px;
+
+    background: #881C1C;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+}
+#save{
+    position: absolute;
+    top:850px;
+    left: 500px;
+    width: 150px;
+    height: 50px;
+
+    background: #881C1C;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+}

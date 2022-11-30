@@ -43,7 +43,7 @@ for (let row = 1; row < 25; ++row){
     hour.innerText = text;
 }
 
-document.getElementById(`slot-0-0`).innerText = "MARCH\n2020";
+document.getElementById(`slot-0-0`).innerText = "FEB.\n2020";
 
 document.getElementById("slot-0-1").innerHTML = `<div class="week-day">SUNDAY</div><div class="week-date">23</div>`;
 document.getElementById("slot-0-2").innerHTML = `<div class="week-day">MONDAY</div><div class="week-date">24</div>`;
