@@ -22,7 +22,7 @@ const EventTextElem = ({regEvent, weekNum, row, col}) => {
 
         return (
             <div id={`event-text-${regEvent.id}`} key={`event-text-${regEvent.id}`} className="event-text" style={{bottom: `${150-middle/100%60/60*100}%`}}>
-                {`${regEvent.name}`}<br/>{`${ch.from24To12(regEvent.startTime)}-${ch.from24To12(regEvent.endTime)}`}
+                {`${regEvent.name}`}<br/>{`${ch.from24To12(regEvent.startTime)} - ${ch.from24To12(regEvent.endTime)}`}
             </div>
         );
     }

@@ -9,7 +9,7 @@ function App() {
   return (
       <div className="app-container">
         <MainPageElem regEventsArr={[regEvent]} weekNum={0}/>
-        <AddAssignmentElem></AddAssignmentElem>
+        <AddAssignmentElem />
       </div>
   );
 }

@@ -130,7 +130,7 @@ body {
   width: 60%;
   height: 40%;
   background: rgba(136, 28, 28, 0.12);
-  box-shadow: 0vh 0vh 2vh 2vh rgba(136, 28, 28, 0.12);
+  box-shadow: 0vh 0vh min(calc((100vw - 6vw - 1vw ) / 42), 2vh) min(calc((100vw - 6vw - 1vw ) / 42), 2vh) rgba(136, 28, 28, 0.12);
   border-radius: 1vh;
 }
 
