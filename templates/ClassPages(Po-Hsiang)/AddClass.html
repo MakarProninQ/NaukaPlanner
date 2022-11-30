@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AddClass</title>
+    <script type="module" src="Class.js" defer></script>
+    <link rel="stylesheet" href="Class.css" />
+  </head>
+  <body>
+    <div class="titles">
+        <p>
+            <label for="name" id="nameT">Name*: </label>
+            <input type="text" id="name" name="name" required>
+        </p>
+        <p>
+            <label for="type" id="typeT">Type*: </label>
+            <select name="type" id="type">
+                <option value="class">Class</option>
+            </select>
+        </p>
+        <p>
+            <label for="time" id="time"><span id="timeT">Time*: </span>
+                <input type="text" id="time" name="startTime" required>
+                <span id="timeDash">-</span>
+                <input type="text" id="time" name="endTime" required>
+            </label>
+        </p>
+        <p id="day"> <span id="dayT">Day*:</span> 
+            <input type="checkbox" id="sunday" name="sunday" value="sunday">
+            <label for="sunday" id="sundayT">S</label>
+            
+            <input type="checkbox" id="monday" name="monday" value="monday">
+            <label for="monday" id="mondayT">M</label>
+
+            <input type="checkbox" id="tuesday" name="tuesday" value="tuesday">
+            <label for="tuesday" id="tuesdayT">T</label>
+            
+            <input type="checkbox" id="wednesday" name="wednesday" value="wednesday">
+            <label for="wednesday" id="wednesdayT">W</label>
+
+            <input type="checkbox" id="thursday" name="thursday" value="thursday">
+            <label for="thursday" id="thursdayT">T</label>
+            
+            <input type="checkbox" id="friday" name="friday" value="friday">
+            <label for="friday" id="fridayT">F</label>
+
+            <input type="checkbox" id="saturday" name="saturday" value="saturday">
+            <label for="saturday" id="saturdayT">S</label>
+        </p>
+        <p>
+            <label for="weeks"> <span id="weekT">Weeks*:</span>
+                <input type="date" id="startdate" name="startdate" required>
+                <span id="weekDash">-</span> 
+                <input type="date" id="enddate" name="enddate" required>
+            </label>
+        </p>
+        <p>    
+            <label for="location" id="locationT">Location: </label>
+            <input type="text" id="location" name="location">
+        </p>
+        <p>
+            <label for="link" id="linkT">Link: </label>
+            <input type="text" id="link" name="link">
+        </p>
+        <p>
+            <label for="note" id="noteT">Notes: </label>
+            <textarea id="note" name="note"></textarea>
+        </p>
+        <p>
+            <button id="cancel"><span style="color: white">Cancel</span></button>
+            <button id="save"><span style="color: white">Save</span></button>
+        </p>
+    </div>
+  </body>
