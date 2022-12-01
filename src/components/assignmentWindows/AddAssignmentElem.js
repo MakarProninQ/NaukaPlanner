@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
 class AddAssignmentElem extends Component {
-
   render() {
     return (
       <div class="popup">
