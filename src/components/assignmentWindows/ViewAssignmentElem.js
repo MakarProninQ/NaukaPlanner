@@ -1,13 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>View Assignment</title>
-    <link rel="stylesheet" href="Assignment.css" />
-  </head>
-  <body>
-    <div class="popup">
+import React, { Component } from 'react';
+
+class ViewAssignmentElem extends Component {
+  render() {
+    return (
+      <div class="popup">
       <form class="my-form">
         <label class="form-label" for="name">Name<span class="asterisk-color">*</span>:</label>
         <input class="form-input" type="text" id="name" name="name"/>
@@ -43,5 +39,8 @@
         <button class="button-class button3" name="edit" id="edit">EDIT</button>
       </div>
     </div>
-  </body>
-</html>
+    )
+  }
+}
+
+export default ViewAssignmentElem;
