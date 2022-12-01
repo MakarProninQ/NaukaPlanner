@@ -3,11 +3,11 @@ import EventElems from "./EventElems";
 import * as ch from "../../calendarHelper";
 import { useState } from "react";
 
-const MainPageElem = ({regEventsArrArg, weekNumArg, popUp}) => {
+const MainPageElem = ({eventsObj, setEventsObj, popUp, setPopUp, weekNumArg}) => {
+    const regEventsArr = eventsObj.regEventsArr;
     const calendarContainer = document.createElement("div");
     calendarContainer.id = "calendar-container";
 
-    const [regEventsArr, setRegEventsArr] = useState(regEventsArrArg);
     const [weekNum, setWeekNum] = useState(weekNumArg);
 
     const TimeSlotElem = ({row, col}) => {
@@ -154,7 +154,7 @@ const MainPageElem = ({regEventsArrArg, weekNumArg, popUp}) => {
 
     return (
     <div id="main-container">
-        <Header />
+        <Header eventsObj={eventsObj} setEventsObj={setEventsObj} popUp={popUp} setPopUp={setPopUp}/>
         {Grid()}
     </div>
     );

@@ -18,7 +18,7 @@ export default class Events{
                 const startDate = ch.dateAndTimeToDateObj(event.startWeek, event.startTime);
                 const endDate = ch.dateAndTimeToDateObj(event.endWeek, event.endTime);
                 for (let day = 0; day < 7 * 10; ++day){
-                    const regEvent = {id: event.id, type: event.type, name: event.name, progressBar: 0};
+                    const regEvent = {id: `${event.id}-${day}`, type: event.type, name: event.name, progressBar: 0};
                     const curStartDate = ch.addDaysToDate(startDate, day);
                     const curEndDate = ch.addDaysToDate(endDate, day);
                     if(event.day[curStartDate.getDay()] === true){
@@ -34,7 +34,7 @@ export default class Events{
                 const startDate = ch.dateAndTimeToDateObj(event.startWeek, event.startTime);
                 const endDate = ch.dateAndTimeToDateObj(event.endWeek, event.endTime);
                 for (let day = 0; day < 7 * 10; ++day){
-                    const regEvent = {id: event.id, type: event.type, name: event.name, progressBar: 0};
+                    const regEvent = {id: `${event.id}-${day}`, type: event.type, name: event.name, progressBar: 0};
                     const curStartDate = ch.addDaysToDate(startDate, day);
                     const curEndDate = ch.addDaysToDate(endDate, day);
                     if(event.day[curStartDate.getDay()] === true){
