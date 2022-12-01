@@ -256,3 +256,28 @@ body {
 .deadline-event {
     
 }
+
+#arrow-right{
+    width: 0; 
+    height: 0; 
+    position: absolute;
+    top: calc(((91.6vh)-min(5vh, 10vw))/2);
+    right: 1vw;;
+    border-top: min(8vh, 10vw) solid transparent;
+    border-bottom: min(8vh, 10vw) solid transparent; 
+    border-left: min(8vh, 10vw) solid #0000003e;
+    box-shadow: 0vh 0.42vh 0.42vh rgba(0, 0, 0, 0.25);
+    border-radius: min(8vh, 10vw);
+}
+
+#arrow-left{
+    width: 0; 
+    height: 0; 
+    position: absolute;
+    top: calc(((91.6vh)-min(5vh, 10vw))/2);
+    border-top: min(8vh, 10vw) solid transparent;
+    border-bottom: min(8vh, 10vw) solid transparent; 
+    border-right: min(8vh, 10vw) solid #0000003e;
+    box-shadow: 0vh 0.42vh 0.42vh rgba(0, 0, 0, 0.25);
+    border-radius: min(8vh, 10vw);
+}

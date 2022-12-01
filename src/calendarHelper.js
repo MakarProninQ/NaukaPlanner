@@ -72,3 +72,61 @@ export function from24To12(time) { //hh:mm
 
     return text;
 }
+
+export function dateAndTimeToNum(date, time){
+    const dateArr = date.split("-");
+    const timeArr = time.split(":");
+    const num = dateArr[0]*10**8 + dateArr[1]*10**6 + dateArr[2]*10**4 + timeArr[0]*10**2 + parseInt(timeArr[1]);
+    return num;
+}
+
+export function minsBetweenTimes(time1, time2){
+    const hour1 = parseInt(time1.split(":")[0]);
+    const min1 = parseInt(time1.split(":")[1]);
+    const hour2 = parseInt(time2.split(":")[0]);
+    const min2 = parseInt(time2.split(":")[1]);
+    const result =  (60*24 + ((hour2*60+min2) - (hour1*60+min1)))%(60*24);
+    return result;
+}
+
+export function slotToTimeAndDate(row, col, weekNum){
+    let weekDts = weekDates(weekNum);
+    let month = weekMonth(weekNum);
+    let year = weekYear(weekNum);
+
+    const minute = "00";
+    let hour = (row + 7) % 24;
+    let date = weekDts[col - 1];
+    if ((row + 7) >= 24){
+        if (col === 7){
+            date = weekDates(weekNum+1)[0];
+        }
+        else{
+            date = weekDts[col];
+        }
+    }
+    if (weekDts[0] > date){
+        month = weekMonth(weekNum + 1);
+        if (month === 1){
+            year += 1;
+        }
+    }
+
+    return {date: `${year}-${month}-${date}`, time: `${hour}:${minute}`}; //{date: "yyyy-mm-dd", time: "hh:mm"};
+}
+
+export  function dateAndTimeToDateObj(date, time){
+    const dateArr = date.split("-");
+    const timeArr = time.split(":");
+    const dateObj = new Date(dateArr[0], dateArr[1] - 1, dateArr[2], timeArr[0], timeArr[1])
+    return dateObj;
+}
+
+export function middleMoment(date1, time1, date2, time2) {
+    const dateArr1 = date1.split("-");
+    const timeArr1 = time1.split(":");
+    const mins = (dateAndTimeToDateObj(date2, time2) - dateAndTimeToDateObj(date1, time1))/120000;
+    let moment = new Date(dateArr1[0], dateArr1[1] - 1, dateArr1[2], timeArr1[0], parseInt(timeArr1[1])+mins);
+    const result =  {date: `${moment.getFullYear()}-${moment.getMonth() + 1}-${moment.getDate()}`, time: `${moment.getHours()}:${moment.getMinutes()}`};
+    return result; //{date: "yyyy-mm-dd", time: "hh:mm"}
+}

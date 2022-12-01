@@ -1,35 +1,67 @@
 import * as ch from "../../calendarHelper";
 
-const EventTextElem = ({regEvent, weekNum, row, col}) => {
-    const weekDates = ch.weekDates(weekNum);
-    const weekMonth = ch.weekMonth(weekNum);
-    const weekYear = ch.weekYear(weekNum);
+const EventTextElem = ({regEvent, weekNum, col}) => {
+    if (col <= 0 || col > 7){
+        return;
+    }
 
-    const startTime = regEvent.startTime.split(":");
-    const startDate = regEvent.startDate.split("-");
-    const endTime = regEvent.endTime.split(":");
-    const endDate = regEvent.endDate.split("-");
+    const middleMoment = ch.middleMoment(regEvent.startDate, regEvent.startTime, regEvent.endDate, regEvent.endTime);
+    const middleDateNum = ch.dateAndTimeToNum(middleMoment.date, middleMoment.time);
 
-    const startNum = startDate[0]*10**8 + startDate[1]*10**6 + startDate[2]*10**4 + startTime[0]*10**2 + parseInt(startTime[1]);
-    const endNum = endDate[0]*10**8 + endDate[1]*10**6 + endDate[2]*10**4 + (endTime[0]-1)*10**2 + parseInt(endTime[1]);
-    const slotNum = weekYear*10**8 + weekMonth*10**6 + weekDates[col-1]*10**4 + ((row + 7) % 24)*10**2;
-    const middle = Math.floor(startNum + endNum)/2;
-    const middleSlot = Math.ceil(middle/100);
+    const colStartDate = ch.slotToTimeAndDate(1, col, weekNum);
+    const colStartDateNum = ch.dateAndTimeToNum(colStartDate.date, colStartDate.time);
+    let colEndDate = "";
+    if (col === 7){
+        colEndDate = ch.slotToTimeAndDate(1, 1, weekNum + 1);
+    }
+    else{
+        colEndDate = ch.slotToTimeAndDate(1, col+1, weekNum);
+    }
+    const colEndDateNum = ch.dateAndTimeToNum(colEndDate.date, colEndDate.time);
 
-    console.log();
+    let top = 0;
 
-    if (slotNum/100 === middleSlot){
+    if (middleDateNum >= colStartDateNum && middleDateNum < colEndDateNum){
+        top = ch.minsBetweenTimes(colStartDate.time, middleMoment.time)/60/24*100;
+    }
+    else{
+        return ;
+    }
 
+    top = top - (1/48)*100;
+
+    if (top < 0){
+        top = 0;
+    }
+
+    if(top > 100 - (1/24*100)) {
+        top = (23/24) * 100;
+    }
+
+    const singleSlotVH = 91.6 / 16.5;
+    const gridHeightVH = (singleSlotVH * 24);
+
+    const height = ch.minsBetweenTimes(regEvent.startTime, regEvent.endTime)/60/24*100;
+
+    if (height >= 1/24*99){
         return (
-            <div id={`event-text-${regEvent.id}`} key={`event-text-${regEvent.id}`} className="event-text" style={{bottom: `${150-middle/100%60/60*100}%`}}>
+            <div id={`event-text-${regEvent.id}`} key={`event-text-${regEvent.id}`} className="event-text" 
+            style={{top: `${gridHeightVH * top / 100 + singleSlotVH}vh`}}>
                 {`${regEvent.name}`}<br/>{`${ch.from24To12(regEvent.startTime)} - ${ch.from24To12(regEvent.endTime)}`}
             </div>
         );
     }
-    else {
-        return ;
+
+    if (height >= 1/48*99){
+        return (
+            <div id={`event-text-${regEvent.id}`} key={`event-text-${regEvent.id}`} className="event-text" 
+            style={{top: `${gridHeightVH * top / 100 + singleSlotVH}vh`, lineHeight: `${91.6 / 16.5}vh`}}>
+                {`${regEvent.name}`}
+            </div>
+        );
     }
 
+    return ;
 }
 
 export default EventTextElem;
