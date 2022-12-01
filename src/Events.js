@@ -3,7 +3,9 @@ import * as ch from "./calendarHelper";
 export default class Events{
     constructor(eventsArr){
         this.eventsArr = eventsArr;
-        this.regEventsArr = this.eventsToRegEvents();
+        this.noSuggArr = this.eventsToRegEvents();
+        this.suggestionsArr = this.suggestionsToRegEvents();
+        this.regEventsArr = this.noSuggArr;
     }
 
     eventsToRegEvents(){
@@ -55,6 +57,16 @@ export default class Events{
                 regEvent["endTime"] = event.dueTime;
                 result.push(regEvent);
             }
+        }
+
+        return result;
+    }
+
+    suggestionsToRegEvents(){
+        const result = [];
+
+        for (let i = 0; i < this.eventsArr.length; ++i){
+            const event = this.eventsArr[i];
             if (event.type === "suggestion"){
                 const regEvent = {id: event.id, type: event.type, name: event.name, progressBar: 0};
                 regEvent["startDate"] = event.startDate;
@@ -66,5 +78,11 @@ export default class Events{
         }
 
         return result;
+    }
+
+    addSuggToRegEvents(){
+        this.regEventsArr = this.noSuggArr.concat(this.suggestionsArr);
+
+        return this.regEventsArr;
     }
 }
