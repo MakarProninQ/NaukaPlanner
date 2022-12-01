@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import CancelButton from './AssignmentCancelButton';
 
 class AddAssignmentElem extends Component {
+  
+
   render() {
     return (
       <div class="popup">

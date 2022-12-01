@@ -8,7 +8,7 @@ const PopUpWindow = ({eventsObj, setEventsObj, popUp, setPopUp}) => {
     }
     if (popUp.type === "addAssignment"){
         return (
-            <AddAssignmentElem></AddAssignmentElem>
+            <AddAssignmentElem eventsObj={eventsObj} setEventsObj={setEventsObj} popUp={popUp} setPopUp={setPopUp}/>
         );
     }
     return ;
