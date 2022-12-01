@@ -203,8 +203,8 @@ body {
 .event-text {
   overflow: hidden;
   white-space: nowrap;
-  left: 5%;
-  width: 90%;
+  left: 10%;
+  width: 80%;
   position: absolute;
   font-family: 'Segoe UI';
   font-weight: 350;
