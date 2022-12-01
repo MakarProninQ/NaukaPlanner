@@ -1,11 +1,14 @@
 import Header from "./Header";
 import EventElems from "./EventElems";
 import * as ch from "../../calendarHelper";
+import { useState } from "react";
 
-const MainPageElem = ({regEventsArr, weekNum}) => {
-
+const MainPageElem = ({regEventsArrArg, weekNumArg}) => {
     const calendarContainer = document.createElement("div");
     calendarContainer.id = "calendar-container";
+
+    const [regEventsArr, setRegEventsArr] = useState(regEventsArrArg);
+    const [weekNum, setWeekNum] = useState(weekNumArg);
 
     const TimeSlotElem = ({row, col}) => {
         const monthMapping = {1: "JAN", 2: "FEB", 3: "MAR", 4: "APR", 5: "MAY", 6: "JUN", 7: "JUL", 8: "AUG", 9: "SEP", 10: "OCT",
@@ -143,6 +146,8 @@ const MainPageElem = ({regEventsArr, weekNum}) => {
         return (
             <div id="calendar-container">
                 {columns}
+                <div id="arrow-left" onClick={() => {setWeekNum(weekNum - 1)}}></div>
+                <div id="arrow-right" onClick={() => {setWeekNum(weekNum + 1)}}></div>
             </div>
         );
     };

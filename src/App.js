@@ -10,7 +10,7 @@ endTime: "16:15", endDate: "2022-11-30", progressBar: 60};
 function App() {
   return (
       <div className="app-container">
-        <MainPageElem regEventsArr={[regEvent1, regEvent2]} weekNum={0}/>
+        <MainPageElem regEventsArrArg={[regEvent1, regEvent2]} weekNumArg={0}/>
       </div>
   );
 }

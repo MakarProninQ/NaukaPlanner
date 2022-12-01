@@ -97,3 +97,11 @@ divToContainText.innerText = `Learn React\n12:15pm-4:55pm`;
 
 
 document.getElementById(`slot-${12-7+2}-${2+1}`).appendChild(divToContainText);
+
+const arrowRightDiv = document.createElement("div");
+arrowRightDiv.id = "arrow-right";
+document.getElementById("calendar-container").appendChild(arrowRightDiv);
+
+const arrowLeftDiv = document.createElement("div");
+arrowLeftDiv.id = "arrow-left";
+document.getElementById("calendar-container").appendChild(arrowLeftDiv);
