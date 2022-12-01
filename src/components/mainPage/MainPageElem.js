@@ -2,7 +2,7 @@ import Header from "./Header";
 import EventElems from "./EventElems";
 import * as ch from "../../calendarHelper";
 
-const MainPageElem = ({regEventsArr, weekNum}) => {
+const MainPageElem = ({regEventsArr, weekNum, addAssignF}) => {
 
     const calendarContainer = document.createElement("div");
     calendarContainer.id = "calendar-container";
@@ -149,7 +149,7 @@ const MainPageElem = ({regEventsArr, weekNum}) => {
 
     return (
     <div id="main-container">
-        <Header />
+        <Header addAssignF = {addAssignF}/>
         {Grid()}
     </div>
     );

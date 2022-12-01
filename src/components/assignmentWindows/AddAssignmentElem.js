@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import CancelButton from './AssignmentCancelButton';
 
 class AddAssignmentElem extends Component {
   render() {
@@ -35,7 +36,7 @@ class AddAssignmentElem extends Component {
           <textarea class="form-input" name="notes" id="notes" maxlength="500"></textarea>
         </form>
         <div class="button-list">
-          <button class="button-class button1" name="cancel" id="cancel">Cancel</button>
+          <CancelButton closeAssignF = {this.props.closeAssignF}></CancelButton>
           <button class="button-class button2" name="delete" id="delete">Delete</button>
           <button class="button-class button3" name="save" id="save">SAVE</button>
         </div>
