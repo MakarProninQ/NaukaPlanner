@@ -201,7 +201,11 @@ body {
 }
 
 .event-text {
-  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+  left: 5%;
+  width: 90%;
+  position: absolute;
   font-family: 'Segoe UI';
   font-weight: 350;
   font-size: min(2.4vh, 1.3vw);
@@ -215,32 +219,14 @@ body {
   text-shadow: 0vh 0.42vh 0.42vh rgba(0, 0, 0, 0.25);
 }
 
-.event-start {
-  margin: 0 auto 0;
+.event-elem {
+  overflow: hidden;
+  left: 2%;
   width: 96%;
-  height: 75%;
-  position: relative;
-  border-bottom: hidden !important;
-  border-radius: calc((91.6vh) / 33) calc((91.6vh) / 33) 0 0;
+  position: absolute;
+  border-radius: calc((91.6vh) / 33);
 }
 
-.event-middle {
-  margin: 0 auto 0;
-  width: 96%;
-  height: 100%;
-  position: relative;
-  border-top: hidden !important;
-  border-bottom: hidden !important;
-}
-
-.event-end {
-  margin: 0 auto 0;
-  width: 96%;
-  height: 50%;
-  position: relative;
-  border-top: hidden !important;
-  border-radius: 0 0 calc((91.6vh) / 33) calc((91.6vh) / 33);
-}
 
 .class-event {
   border: 1px solid #00C7A3;
@@ -262,6 +248,26 @@ body {
   filter: drop-shadow(0vh 0.42vh 0.42vh rgba(255, 0, 46, 0.5));
 }
 
+.progress-bar {
+  border-bottom-left-radius: calc((91.6vh) / 33);
+  border-top-left-radius: calc((91.6vh) / 33);
+}
+
+.progress-bar-class {
+  background-color: rgba(0, 199, 163, 0.1)
+}
+
+.progress-bar-suggestion {
+  background-color: rgba(135, 0, 199, 0.1);
+}
+
+.progress-bar-other {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.progress-bar-deadline {
+  background-color: rgba(255, 0, 46, 0.1);
+}
 
 
 

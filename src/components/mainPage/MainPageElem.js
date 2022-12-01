@@ -110,7 +110,6 @@ const MainPageElem = ({regEventsArr, weekNum}) => {
 
         return (
             <div className={`time-slot row-${row} col-${col}`} id={`slot-${row}-${col}`} key={`slot-${row}-${col}`}>
-                {EventElems({regEventsArr: regEventsArr, weekNum: weekNum, row: row, col: col})}
             </div>
         );
     };
@@ -130,6 +129,7 @@ const MainPageElem = ({regEventsArr, weekNum}) => {
         return (
             <div className={className} id={id} key={id}>
                 {rows}
+                {EventElems({regEventsArr: regEventsArr, weekNum: weekNum, col: col})}
             </div>
         );
     };
