@@ -287,7 +287,7 @@ body {
   height: 0;
   position: absolute;;
   top: calc(((91.6vh)-min(5vh, 10vw))/2);
-  left: 0;
+  left: 6vw;
   border-top: min(8vh, 10vw) solid transparent;
   border-bottom: min(8vh, 10vw) solid transparent; 
   border-right: min(8vh, 10vw) solid #0000003e;
