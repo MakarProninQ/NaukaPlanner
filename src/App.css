@@ -457,7 +457,7 @@ input[type="range"]::-webkit-slider-thumb {
 
   background-color: #EEEEEE;
   height: 40px;
-  width: 1rem;  
+  width: 16px;  
   border-radius: 20px;
   overflow: visible;
 }
@@ -469,7 +469,7 @@ input[type="range"]::-moz-range-thumb {
 
   background-color: #EEEEEE;
   height: 2rem;
-  width: 1rem;
+  width: 16px;
 }
 
 /*** Focus Styles ***/
@@ -479,23 +479,30 @@ input[type="range"]:focus {
 }
 
 /* Chrome, Safari, Opera, and Edge Chromium */
-input[type="range"]:focus::-webkit-slider-thumb {
-  border: 1px solid #000000;
+.slider-completion:focus::-webkit-slider-thumb {
+  box-shadow: 0px 0.5px 5px rgba(0, 0, 0, 0.1) inset, -200px 0 0 192px rgba(255, 0, 46, 0.1);
 }
 
 /* Firefox */
-input[type="range"]:focus::-moz-range-thumb {
-  border: 1px solid #000000;
-  outline: 1.5px solid #000000;
-  outline-offset: 0.125rem;     
+.slider-completion:focus::-moz-range-thumb {
+  box-shadow: 0px 0.5px 5px rgba(0, 0, 0, 0.1) inset, -200px 0 0 192px rgba(255, 0, 46, 0.1);
+}
+
+.slider-difficulty:focus::-webkit-slider-thumb {
+  box-shadow: 0px 0.5px 5px rgba(0, 0, 0, 0.1) inset, -200px 0 0 192px rgba(135, 0, 199, 0.25);
+}
+
+/* Firefox */
+.slider-difficulty:focus::-moz-range-thumb {
+  box-shadow: 0px 0.5px 5px rgba(0, 0, 0, 0.1) inset, -200px 0 0 192px rgba(135, 0, 199, 0.25);
 }
 
 .slider-completion::-webkit-slider-thumb{
-  box-shadow: -200px 0 0 200px rgba(255, 0, 46, 0.1);
+  box-shadow: 0px 0.5px 5px rgba(0, 0, 0, 0.1), -200px 0 0 192px rgba(255, 0, 46, 0.1);
 }
 
 .slider-difficulty::-webkit-slider-thumb{
-  box-shadow: -200px 0 0 200px rgba(135, 0, 199, 0.25);
+  box-shadow: 0px 0.5px 5px rgba(0, 0, 0, 0.1), -200px 0 0 192px rgba(135, 0, 199, 0.25);
 }
 
 /***** End Styling for Sliders *****/
