@@ -3,8 +3,7 @@ import EventElems from "./EventElems";
 import * as ch from "../../calendarHelper";
 import { useState } from "react";
 
-const MainPageElem = ({regEventsArrArg, weekNumArg, addAssignF}) => {
-
+const MainPageElem = ({regEventsArrArg, weekNumArg, popUp}) => {
     const calendarContainer = document.createElement("div");
     calendarContainer.id = "calendar-container";
 
@@ -155,7 +154,7 @@ const MainPageElem = ({regEventsArrArg, weekNumArg, addAssignF}) => {
 
     return (
     <div id="main-container">
-        <Header addAssignF = {addAssignF}/>
+        <Header />
         {Grid()}
     </div>
     );

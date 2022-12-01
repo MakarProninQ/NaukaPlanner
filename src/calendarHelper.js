@@ -55,7 +55,10 @@ export function hourText(hour) { //0-24
 
 export function from24To12(time) { //hh:mm
     const hour = time.split(":")[0];
-    const min = time.split(":")[1];
+    let min = time.split(":")[1];
+    if (parseInt(min)/10 === 0){
+        min += "0";
+    }
     let text;
     if (hour % 12 === 0){
         text = `12:${min}`;
@@ -127,6 +130,16 @@ export function middleMoment(date1, time1, date2, time2) {
     const timeArr1 = time1.split(":");
     const mins = (dateAndTimeToDateObj(date2, time2) - dateAndTimeToDateObj(date1, time1))/120000;
     let moment = new Date(dateArr1[0], dateArr1[1] - 1, dateArr1[2], timeArr1[0], parseInt(timeArr1[1])+mins);
-    const result =  {date: `${moment.getFullYear()}-${moment.getMonth() + 1}-${moment.getDate()}`, time: `${moment.getHours()}:${moment.getMinutes()}`};
+    const result =  dateToStr(moment);
     return result; //{date: "yyyy-mm-dd", time: "hh:mm"}
+}
+
+export function dateToStr(date){
+    const result =  {date: `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`, time: `${date.getHours()}:${date.getMinutes()}`};
+    return result;
+}
+
+export function addDaysToDate(date, daysNum) {
+    const result = new Date(date.getFullYear(), date.getMonth(), date.getDate() + daysNum, date.getHours(), date.getMinutes());
+    return result;
 }

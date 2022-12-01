@@ -1,11 +1,9 @@
-import AddEvent from "./AddEventButton";
-
-const Header = ({addAssignF}) => {
+const Header = () => {
     return (
         <div id="header">
             <span id="nauka-planner-name">Nauka Planner</span>
             <button id="suggestions-button">Suggestions</button>
-            <AddEvent addAssignF={addAssignF}></AddEvent>
+            <button id="add-event-button">+Add Event</button>
         </div>
     )
 };
