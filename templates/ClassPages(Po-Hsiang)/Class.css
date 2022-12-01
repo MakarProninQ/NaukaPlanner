@@ -1,0 +1,267 @@
+.titles {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 32%;
+    height: 85%;
+    transform: translate(-50%, -50%);
+  
+    background-color: #FFFFFF;
+    padding: 1.5%;
+    box-shadow: 0px 0px 7.5px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+  
+    display: grid;
+    grid-template-rows: 91% 7%;
+    row-gap: 2%;
+  }
+.my-form {
+    display: grid;
+    grid-template-columns: 27% 35% 35%;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 5fr;
+    row-gap: 1%;
+  }
+.form-label {
+    grid-column: 1 / 1;
+    padding: 10%;
+  
+    font-family: 'Segoe UI';
+    font-style: italic;
+    font-size: 22px;
+    font-weight: 200;
+    letter-spacing: 0.03em;
+  
+    color: #000000;
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  }
+  .asterisk-color {
+    color: #881C1C;
+  }
+  
+  .form-input {
+    grid-column: 2 / 4;
+    margin: 1%;
+    padding: 10px;
+  
+    background: #FFFFFF;
+    border: 1px;
+    box-shadow: 0px 0.5px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+  
+    font-family: 'Segoe UI';
+    font-style: italic;
+    font-size: 18px;
+    font-weight: 200;
+    text-align: center;
+  
+    color: #6C6C6C;
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  
+    resize: none;
+  }
+  .event-dropdown {
+    grid-column: 2 / 4;
+  
+    background: #FFFFFF;
+    box-shadow: 0px 0.5px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+  
+    font-family: 'Segoe UI';
+    font-style: italic;
+    font-size: 18px;
+    font-weight: 200;
+    text-align: center;
+  
+    color: #6C6C6C;
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  }
+  
+  .event-dropdown:active {
+    border: 1px solid black;
+  }
+  .startdate {
+    grid-column: 2/2;
+    margin-right: 10%;
+  }
+  
+  .enddate {
+    grid-column: 3/3;
+  }
+#timeDash{
+    position: absolute;
+    width: 10px;
+    left: 300px;
+    height: 30px;
+    top: 145px;
+    
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 200;
+    font-size: 18px;
+    text-align: center;
+    
+    color: #6C6C6C;
+    
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#sunday{
+    position: absolute;
+    top: 240px;
+    left: 160px;
+    visibility: hidden;
+}
+#monday{
+    position: absolute;
+    top: 240px;
+    left: 1200px;
+    visibility: hidden;
+}
+#tuesday{
+    position: absolute;
+    top: 240px;
+    left: 240px;
+    visibility: hidden;
+}
+#wednesday{
+    position: absolute;
+    top: 240px;
+    left: 280px;
+    visibility: hidden;
+}
+#thursday{
+    position: absolute;
+    top: 240px;
+    left: 320px;
+    visibility: hidden;
+}
+#friday{
+    position: absolute;
+    top: 240px;
+    left: 360px;
+    visibility: hidden;
+}
+#saturday{
+    position: absolute;
+    top: 240px;
+    left: 400px;
+    visibility: hidden;
+}
+#sundayT{
+    position: absolute;
+    top: 200px;
+    left: 160px;
+}
+#mondayT{
+    position: absolute;
+    top: 200px;
+    left: 200px;
+}
+#tuesdayT{
+    position: absolute;
+    top: 200px;
+    left: 240px;
+}
+#wednesdayT{
+    position: absolute;
+    top: 200px;
+    left: 280px;
+}
+#thursdayT{
+    position: absolute;
+    top: 200px;
+    left: 320px;
+}
+#fridayT{
+    position: absolute;
+    top: 200px;
+    left: 360px;
+}
+#saturdayT{
+    position: absolute;
+    top: 200px;
+    left: 400px;
+}
+#sunday:checked ~ label[for="sunday"],
+#monday:checked ~ label[for="monday"],
+#tuesday:checked ~ label[for="tuesday"],
+#wednesday:checked ~ label[for="wednesday"],
+#thursday:checked ~ label[for="thursday"],
+#friday:checked ~ label[for="friday"],
+#saturday:checked ~ label[for="saturday"] {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    color: black;
+}
+
+input[type="checkbox"] + label{
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    border: 1px solid #ddd;
+    line-height: 32px;
+    cursor: pointer;
+    
+    font-family: 'Inter';
+    font-style: italic;
+    border-radius: 100%;
+
+    color: #6C6C6C;
+}
+
+#weekDash{
+    position: absolute;
+    width: 10px;
+    left: 300px;
+    height: 30px;
+    top: 265px;
+    
+    font-family: 'Inter';
+    font-style: italic;
+    font-weight: 200;
+    font-size: 18px;
+    text-align: center;
+    
+    color: #6C6C6C;
+    
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+ 
+#notes {
+    text-align: left;
+}
+.button-list {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-row: 100%;
+  }
+
+.button-class {
+    background: #881C1C;
+    border: none;
+    border-radius: 30px;
+    margin: 7px;
+    height: 90%;
+    width: 90%;
+  
+    font-family: 'Segoe UI';
+    font-style: italic;
+    font-size: 18px;
+    font-weight: 200;
+    letter-spacing: 0.03em;
+    text-align: center;
+  
+    color: #FFFFFF;
+  }
+
+.button1 {
+    grid-column: 1 / 2;
+  }
+  
+.button2 {
+    grid-column: 2 / 3;
+  }
+  
+.button3 {
+    grid-column: 3 / 4;
+  }
