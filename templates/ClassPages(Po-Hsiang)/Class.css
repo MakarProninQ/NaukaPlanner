@@ -1,267 +1,186 @@
-#nameT{
+.titles {
     position: absolute;
-    width: 220px;
-    height: 60px;
-    left: 20px;
-    top: 10px;
-    
-    font-family: 'Inter';
+    top: 50%;
+    left: 50%;
+    width: 32%;
+    height: 85%;
+    transform: translate(-50%, -50%);
+  
+    background-color: #FFFFFF;
+    padding: 1.5%;
+    box-shadow: 0px 0px 7.5px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+  
+    display: grid;
+    grid-template-rows: 91% 7%;
+    row-gap: 2%;
+  }
+.my-form {
+    display: grid;
+    grid-template-columns: 27% 35% 35%;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 5fr;
+    row-gap: 1%;
+  }
+.form-label {
+    grid-column: 1 / 1;
+    padding: 10%;
+  
+    font-family: 'Segoe UI';
     font-style: italic;
-    font-weight: 20;
-    font-size: 20px;
-    line-height: 10px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    letter-spacing: 0.1em;
-    
+    font-size: 22px;
+    font-weight: 200;
+    letter-spacing: 0.03em;
+  
     color: #000000;
-    
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-#name{
-    position: absolute;
-    width: 200px;
-    height: 30px;
-    left: 150px;
-    top: 20px;
-    
-    font-family: 'Inter';
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  }
+  .asterisk-color {
+    color: #881C1C;
+  }
+  
+  .form-input {
+    grid-column: 2 / 4;
+    margin: 1%;
+    padding: 10px;
+  
+    background: #FFFFFF;
+    border: 1px;
+    box-shadow: 0px 0.5px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+  
+    font-family: 'Segoe UI';
     font-style: italic;
-    font-weight: 20;
-    font-size: 20px;
-    line-height: 8px;
-    display: flex;
-    align-items: center;
+    font-size: 18px;
+    font-weight: 200;
     text-align: center;
-    
+  
     color: #6C6C6C;
-    
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 20px;
-}
-#typeT{
-    position: absolute;
-    width: 220px;
-    height: 60px;
-    left: 20px;
-    top: 80px;
-    
-    font-family: 'Inter';
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  
+    resize: none;
+  }
+  .event-dropdown {
+    grid-column: 2 / 4;
+  
+    background: #FFFFFF;
+    box-shadow: 0px 0.5px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+  
+    font-family: 'Segoe UI';
     font-style: italic;
-    font-weight: 20;
-    font-size: 20px;
-    line-height: 10px;
-    display: flex;
-    align-items: center;
+    font-size: 18px;
+    font-weight: 200;
     text-align: center;
-    letter-spacing: 0.1em;
-    
-    color: #000000;
-    
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-#type{
-    position: absolute;
-    width: 200px;
-    height: 30px;
-    left: 150px;
-    top: 90px;
-    
-    font-family: 'Inter';
-    font-style: italic;
-    font-weight: 20;
-    font-size: 20px;
-    line-height: 8px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    
+  
     color: #6C6C6C;
-    
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 20px;
-}
-#timeT{
-    position: absolute;
-    width: 220px;
-    height: 60px;
-    left: 20px;
-    top: 150px;
-    
-    font-family: 'Inter';
-    font-style: italic;
-    font-weight: 20;
-    font-size: 20px;
-    line-height: 10px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    letter-spacing: 0.1em;
-    
-    color: #000000;
-    
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-input[name="startTime"]{
-    position: absolute;
-    width: 200px;
-    height: 30px;
-    left: 150px;
-    top: 160px;
-    
-    font-family: 'Inter';
-    font-style: italic;
-    font-weight: 20;
-    font-size: 20px;
-    line-height: 8px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    
-    color: #6C6C6C;
-    
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 20px;
-}
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+  }
+  
+  .event-dropdown:active {
+    border: 1px solid black;
+  }
+  .startdate {
+    grid-column: 2/2;
+    margin-right: 10%;
+  }
+  
+  .enddate {
+    grid-column: 3/3;
+  }
 #timeDash{
     position: absolute;
     width: 10px;
-    left: 375px;
+    left: 300px;
     height: 30px;
-    top: 160px;
+    top: 145px;
     
     font-family: 'Inter';
     font-style: italic;
-    font-weight: 20;
-    font-size: 20px;
-    line-height: 8px;
-    display: flex;
-    align-items: center;
+    font-weight: 200;
+    font-size: 18px;
     text-align: center;
     
     color: #6C6C6C;
     
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-input[name="endTime"]{
-    position: absolute;
-    width: 200px;
-    height: 30px;
-    left: 400px;
-    top: 160px;
-    
-    font-family: 'Inter';
-    font-style: italic;
-    font-weight: 20;
-    font-size: 20px;
-    line-height: 8px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    
-    color: #6C6C6C;
-    
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 20px;
-}
-#dayT{
-    position: absolute;
-    width: 220px;
-    height: 60px;
-    left: 20px;
-    top: 220px;
-    
-    font-family: 'Inter';
-    font-style: italic;
-    font-weight: 20;
-    font-size: 20px;
-    line-height: 10px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    letter-spacing: 0.1em;
-    
-    color: #000000;
-    
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
+
 #sunday{
     position: absolute;
     top: 240px;
-    left: 150px;
+    left: 160px;
     visibility: hidden;
 }
 #monday{
     position: absolute;
     top: 240px;
-    left: 190px;
+    left: 1200px;
     visibility: hidden;
 }
 #tuesday{
     position: absolute;
     top: 240px;
-    left: 230px;
+    left: 240px;
     visibility: hidden;
 }
 #wednesday{
     position: absolute;
     top: 240px;
-    left: 270px;
+    left: 280px;
     visibility: hidden;
 }
 #thursday{
     position: absolute;
     top: 240px;
-    left: 310px;
+    left: 320px;
     visibility: hidden;
 }
 #friday{
     position: absolute;
     top: 240px;
-    left: 350px;
+    left: 360px;
     visibility: hidden;
 }
 #saturday{
     position: absolute;
     top: 240px;
-    left: 390px;
+    left: 400px;
     visibility: hidden;
 }
 #sundayT{
     position: absolute;
-    top: 240px;
-    left: 150px;
+    top: 200px;
+    left: 160px;
 }
 #mondayT{
     position: absolute;
-    top: 240px;
-    left: 190px;
+    top: 200px;
+    left: 200px;
 }
 #tuesdayT{
     position: absolute;
-    top: 240px;
-    left: 230px;
+    top: 200px;
+    left: 240px;
 }
 #wednesdayT{
     position: absolute;
-    top: 240px;
-    left: 270px;
+    top: 200px;
+    left: 280px;
 }
 #thursdayT{
     position: absolute;
-    top: 240px;
-    left: 310px;
+    top: 200px;
+    left: 320px;
 }
 #fridayT{
     position: absolute;
-    top: 240px;
-    left: 350px;
+    top: 200px;
+    left: 360px;
 }
 #saturdayT{
     position: absolute;
-    top: 240px;
-    left: 390px;
+    top: 200px;
+    left: 400px;
 }
 #sunday:checked ~ label[for="sunday"],
 #monday:checked ~ label[for="monday"],
@@ -276,11 +195,11 @@ input[name="endTime"]{
 
 input[type="checkbox"] + label{
     display: inline-block;
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
     text-align: center;
     border: 1px solid #ddd;
-    line-height: 30px;
+    line-height: 32px;
     cursor: pointer;
     
     font-family: 'Inter';
@@ -290,242 +209,59 @@ input[type="checkbox"] + label{
     color: #6C6C6C;
 }
 
-#weekT{
-    position: absolute;
-    width: 220px;
-    height: 60px;
-    left: 20px;
-    top: 290px;
-    
-    font-family: 'Inter';
-    font-style: italic;
-    font-weight: 20;
-    font-size: 20px;
-    line-height: 10px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    letter-spacing: 0.1em;
-    
-    color: #000000;
-    
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-input[name="startdate"]{
-    position: absolute;
-    width: 200px;
-    height: 30px;
-    left: 150px;
-    top: 300px;
-    
-    font-family: 'Inter';
-    font-style: italic;
-    font-weight: 20;
-    font-size: 20px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    
-    color: #6C6C6C;
-    
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 20px;
-}
 #weekDash{
     position: absolute;
     width: 10px;
-    left: 375px;
+    left: 300px;
     height: 30px;
-    top: 300px;
+    top: 265px;
     
     font-family: 'Inter';
     font-style: italic;
-    font-weight: 20;
-    font-size: 20px;
-    line-height: 8px;
-    display: flex;
-    align-items: center;
+    font-weight: 200;
+    font-size: 18px;
     text-align: center;
     
     color: #6C6C6C;
     
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-input[name="enddate"]{
-    position: absolute;
-    width: 200px;
-    height: 30px;
-    left: 400px;
-    top: 300px;
-    
-    font-family: 'Inter';
-    font-style: italic;
-    font-weight: 20;
-    font-size: 20px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    
-    color: #6C6C6C;
-    
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 20px;
+ 
+#notes {
+    text-align: left;
 }
-#locationT{
-    position: absolute;
-    width: 220px;
-    height: 60px;
-    left: 20px;
-    top: 360px;
-    
-    font-family: 'Inter';
-    font-style: italic;
-    font-weight: 20;
-    font-size: 20px;
-    line-height: 10px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    letter-spacing: 0.1em;
-    
-    color: #000000;
-    
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-#location{
-    position: absolute;
-    width: 200px;
-    height: 30px;
-    left: 150px;
-    top: 370px;
-    
-    font-family: 'Inter';
-    font-style: italic;
-    font-weight: 20;
-    font-size: 20px;
-    line-height: 8px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    
-    color: #6C6C6C;
-    
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 20px;
-}
-#linkT{
-    position: absolute;
-    width: 220px;
-    height: 60px;
-    left: 20px;
-    top: 430px;
-    
-    font-family: 'Inter';
-    font-style: italic;
-    font-weight: 20;
-    font-size: 20px;
-    line-height: 10px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    letter-spacing: 0.1em;
-    
-    color: #000000;
-    
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-#link{
-    position: absolute;
-    width: 200px;
-    height: 30px;
-    left: 150px;
-    top: 440px;
-    
-    font-family: 'Inter';
-    font-style: italic;
-    font-weight: 20;
-    font-size: 20px;
-    line-height: 8px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    
-    color: #6C6C6C;
-    
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 20px;
-}
-#noteT{
-    position: absolute;
-    width: 220px;
-    height: 60px;
-    left: 20px;
-    top: 500px;
-    
-    font-family: 'Inter';
-    font-style: italic;
-    font-weight: 20;
-    font-size: 20px;
-    line-height: 10px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    letter-spacing: 0.1em;
-    
-    color: #000000;
-    
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-}
-#note{
-    position: absolute;
-    width: 500px;
-    height: 300px;
-    left: 150px;
-    top: 510px;
-    
-    font-family: 'Inter';
-    font-style: italic;
-    font-weight: 20;
-    font-size: 20px;
-    line-height: 1.5;
-    padding: 10px;
-    display: flex;
-    color: #6C6C6C;
+.button-list {
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-row: 100%;
+  }
 
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 10px;
-}
-
-#cancel{
-    position: absolute;
-    top:850px;
-    left: 20px;
-    width: 150px;
-    height: 50px;
-
+.button-class {
     background: #881C1C;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border: none;
     border-radius: 30px;
-}
-#delete{
-    position: absolute;
-    top:850px;
-    left: 250px;
-    width: 150px;
-    height: 50px;
+    margin: 7px;
+    height: 90%;
+    width: 90%;
+  
+    font-family: 'Segoe UI';
+    font-style: italic;
+    font-size: 18px;
+    font-weight: 200;
+    letter-spacing: 0.03em;
+    text-align: center;
+  
+    color: #FFFFFF;
+  }
 
-    background: #881C1C;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 30px;
-}
-#save{
-    position: absolute;
-    top:850px;
-    left: 500px;
-    width: 150px;
-    height: 50px;
-
-    background: #881C1C;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 30px;
-}
+.button1 {
+    grid-column: 1 / 2;
+  }
+  
+.button2 {
+    grid-column: 2 / 3;
+  }
+  
+.button3 {
+    grid-column: 3 / 4;
+  }
