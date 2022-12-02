@@ -9,24 +9,22 @@
   </head>
   <body>
     <div class="titles">
-        <p>
-            <label for="name" id="nameT">Name*: </label>
-            <input type="text" id="name" name="name" required>
-        </p>
-        <p>
-            <label for="type" id="typeT">Type*: </label>
-            <select name="type" id="type">
+        <form class="my-form">
+            <label for="name" class="form-label">Name<span class="asterisk-color">*</span>: </label>
+            <input class="form-input" type="text" id="name" name="name" required>
+
+            <label for="type" class="form-label">Type<span class="asterisk-color">*</span>: </label>
+            <select class="event-dropdown" name="type" id="type">
                 <option value="class">Class</option>
             </select>
-        </p>
-        <p>
-            <label for="time" id="time"><span id="timeT">Time*: </span>
-                <input type="text" id="time" name="startTime" required>
+        
+            <label  class="form-label" for="time"><span >Time<span class="asterisk-color">*</span>: </span> </label>
+            <input class="form-input startdate" type="text" id="time" name="time" required>
                 <span id="timeDash">-</span>
-                <input type="text" id="time" name="endTime" required>
-            </label>
-        </p>
-        <p id="day"> <span id="dayT">Day*:</span> 
+            <input class="form-input enddate"type="text" id="time" name="time" required>
+        
+        <p id="day"> <span class="form-label">Day*:</span> 
+            
             <input type="checkbox" id="sunday" name="sunday" value="sunday">
             <label for="sunday" id="sundayT">S</label>
             
@@ -48,28 +46,26 @@
             <input type="checkbox" id="saturday" name="saturday" value="saturday">
             <label for="saturday" id="saturdayT">S</label>
         </p>
-        <p>
-            <label for="weeks"> <span id="weekT">Weeks*:</span>
-                <input type="date" id="startdate" name="startdate" required>
+            <label class="form-label" for="weeks"> <span id="weekT">Weeks<span class="asterisk-color">*</span>:</span></label>
+            <input class="form-input startdate" type="date" id="weeks" name="weeks" required>
                 <span id="weekDash">-</span> 
-                <input type="date" id="enddate" name="enddate" required>
-            </label>
-        </p>
-        <p>    
-            <label for="location" id="locationT">Location: </label>
-            <input type="text" id="location" name="location">
-        </p>
-        <p>
-            <label for="link" id="linkT">Link: </label>
-            <input type="text" id="link" name="link">
-        </p>
-        <p>
-            <label for="note" id="noteT">Notes: </label>
-            <textarea id="note" name="note"></textarea>
-        </p>
-        <p>
-            <button id="cancel"><span style="color: white">Cancel</span></button>
-            <button id="save"><span style="color: white">Save</span></button>
-        </p>
+            <input class="form-input enddate" type="date" id="weeks" name="weeks" required>
+            
+            <label class="form-label" for="location">Location: </label>
+            <input class="form-input" type="text" name="location">
+        
+            <label class="form-label" for="link">Link: </label>
+            <input class="form-input"type="text" name="link">
+        
+            <label class="form-label" for="note">Notes: </label>
+            <textarea class="form-input" id="notes" name="note" maxlength="500"></textarea>
+        
+        </form>
+        <div class="button-list">
+            <button class="button-class button1" id="cancel">Cancel</button>
+            <button class="button-class button2" id="delete">Delete</button>
+            <button class="button-class button3" id="save">Save</button>
+        </div>
     </div>
   </body>
+</html>
