@@ -4,7 +4,6 @@ import * as ch from "../../calendarHelper";
 import { useState } from "react";
 
 const MainPageElem = ({eventsObj, setEventsObj, popUp, setPopUp, weekNumArg}) => {
-    const regEventsArr = eventsObj.regEventsArr;
     const calendarContainer = document.createElement("div");
     calendarContainer.id = "calendar-container";
 
@@ -132,7 +131,7 @@ const MainPageElem = ({eventsObj, setEventsObj, popUp, setPopUp, weekNumArg}) =>
         return (
             <div className={className} id={id} key={id}>
                 {rows}
-                {EventElems({regEventsArr: regEventsArr, weekNum: weekNum, col: col})}
+                {EventElems({eventsObj: eventsObj, weekNum: weekNum, col: col})}
             </div>
         );
     };

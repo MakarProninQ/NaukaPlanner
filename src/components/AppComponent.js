@@ -1,7 +1,7 @@
 import { useState } from "react";
 import MainPageElem from "../components/mainPage/MainPageElem";
-import PopUpWindow from "../components/PopUpWindow"
-import Events from "../Events";
+import PopUpWindow from "../components/PopUpWindow";
+import * as eventsHelper from "../eventsHelper";
 
 const event1 = {id: "2b34", type: "class", name: "Learn React", startTime: "00:00", startWeek: "2022-12-1",
 endTime: "23:55", endWeek: "2023-1-2", day: [false, false, false, true, true, false, true], link: "https://link",
@@ -10,8 +10,8 @@ const event2 = {id: "2b234", type: "assignment", name: "Assign Important", dueTi
 link: "https://link", class: "Learn React", compl: 50, difficult: 10, notes: "MyNotes"};
 
 const AppComponent = () => {
-
-    const [eventsObj, setEventsObj] = useState(new Events([event1, event2]));
+    const eventsArr = [event1, event2];
+    const [eventsObj, setEventsObj] = useState(eventsHelper.newEventsObj(eventsArr));
     const [popUp, setPopUp] = useState({show: false, type: null, eventId: null});
     
     return (

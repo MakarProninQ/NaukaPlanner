@@ -1,5 +1,4 @@
 import AddAssignmentElem from "../components/assignmentWindows/AddAssignmentElem";
-import { useState } from "react";
 
 const PopUpWindow = ({eventsObj, setEventsObj, popUp, setPopUp}) => {
 

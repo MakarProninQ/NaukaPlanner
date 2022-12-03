@@ -1,3 +1,4 @@
+import * as eventsHelper from "../../eventsHelper";
 import { useState } from "react";
 
 const AddAssignmentElem = ({eventsObj, setEventsObj, popUp, setPopUp}) => {
@@ -31,7 +32,7 @@ const AddAssignmentElem = ({eventsObj, setEventsObj, popUp, setPopUp}) => {
     //random should be removed
     const newEvent = {id: Math.random().toString(), name: nameIn, type: typeIn, dueTime: dueTimeIn, dueDate: dueDateIn, class: classIn, compl: parseInt(completIn),
     difficult: parseInt(difficultIn), link: linkIn, notes: notesIn};
-    setEventsObj(eventsObj.addEvent(newEvent));
+    setEventsObj(eventsHelper.addEvent(eventsObj, newEvent));
     setPopUp({show: false, type: null, eventId: null});
   }
 
