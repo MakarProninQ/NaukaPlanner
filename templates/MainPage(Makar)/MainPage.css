@@ -257,17 +257,23 @@ body {
     
 }
 
-#arrow-right{
-    width: 0; 
-    height: 0; 
+.arrow-container {
     position: absolute;
     top: calc(((91.6vh)-min(5vh, 10vw))/2);
     right: 1vw;;
-    border-top: min(8vh, 10vw) solid transparent;
-    border-bottom: min(8vh, 10vw) solid transparent; 
-    border-left: min(8vh, 10vw) solid #0000003e;
-    box-shadow: 0vh 0.42vh 0.42vh rgba(0, 0, 0, 0.25);
-    border-radius: min(8vh, 10vw);
+    width: 10vw; 
+    height: 10vh; 
+    filter: drop-shadow(0vh 0.42vh 0.42vh rgba(0, 0, 0, 0.25));
+}
+
+#arrow-right{
+    color:#000000;
+    background-color: #000000;
+    position: absolute;
+    width: 10vw;
+    height: 10vh;
+    transform: scale(1, 0.2);
+    clip-path: path("M 10.279 17.769 Q 27.332 -16.337 44.385 17.769 L 47.351 23.701 Q 64.404 57.807 30.298 57.807 L 24.366 57.807 Q -9.74 57.807 7.313 23.701 Z");
 }
 
 #arrow-left{

@@ -31,11 +31,11 @@ const EventTextElem = ({regEvent, weekNum, col}) => {
     top = top - (1/48)*100;
 
     if (top < 0){
-        top = 0;
+        return;
     }
 
     if(top > 100 - (1/24*100)) {
-        top = (23/24) * 100;
+        return;
     }
 
     const singleSlotVH = 91.6 / 16.5;

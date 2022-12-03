@@ -77,7 +77,7 @@ export function newEventsObj(eventsArr) {
         suggArr: regEvents.filter((regEvent) => regEvent.type === "suggestion"),
         showSugg: false
     };
-    newEventsObj = updateSugg(newEventsObj);
+    newEventsObj = updateSuggs(newEventsObj);
     return newEventsObj;
 }
 
@@ -92,17 +92,17 @@ export function addEvent(oldEventsObj, event){
         newEventsObj.noSuggArr = newEventsObj.noSuggArr.concat(singleEventToRegEvents(event));
     }
 
-    newEventsObj = updateSugg(newEventsObj);
+    newEventsObj = updateSuggs(newEventsObj);
 
     return newEventsObj;
 }
 
-export function updateSugg(oldEventsObj) {
+export function updateSuggs(oldEventsObj) {
     return oldEventsObj;
 }
 
 export function toggleSugg(oldEventsObj) {
     const newEventsObj = Object.assign({}, oldEventsObj);
-    newEventsObj.showSugg = true;
+    newEventsObj.showSugg = !newEventsObj.showSugg;
     return newEventsObj;
 }

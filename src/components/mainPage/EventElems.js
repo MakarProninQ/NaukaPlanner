@@ -4,13 +4,12 @@ import EventTextElem from "./EventTextElem";
 const EventElems = ({eventsObj, weekNum, col}) => {
     const eventElemArr = [];
 
-    let regEventsArr;
-    if (!eventsObj.showSugg){
-        regEventsArr = eventsObj.noSuggArr;
-    }
-    else{
+    let regEventsArr = [];
+    if (eventsObj.showSugg){
         regEventsArr = eventsObj.suggArr;
     }
+
+    regEventsArr = regEventsArr.concat(eventsObj.noSuggArr);
 
     for (let i = 0; i < regEventsArr.length; ++i){
         eventElemArr.push(SingleEventElem({regEvent: regEventsArr[i], weekNum: weekNum, col: col}));
