@@ -34,7 +34,7 @@ body {
   font-family: 'Segoe UI';
   font-style: normal;
   font-weight: 350;
-  font-size: min(3.2vh, 1.3vw);
+  font-size: min(3.6vh, 1.5vw);
   line-height: calc((91.6vh) / 16.5);
   vertical-align: middle;
   text-align: center;

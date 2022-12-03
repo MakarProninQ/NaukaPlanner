@@ -102,6 +102,7 @@ const arrowContainer = document.createElement("div");
 arrowContainer.classList.add("arrow-container");
 const arrowRightDiv = document.createElement("div");
 arrowRightDiv.id = "arrow-right";
+arrowRightDiv.clipPathUnits = "vw";
 arrowContainer.appendChild(arrowRightDiv);
 document.getElementById("calendar-container").appendChild(arrowContainer);
 
