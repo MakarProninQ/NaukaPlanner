@@ -21,9 +21,9 @@ const SingleEventElem = ({regEvent, weekNum, col}) => {
     let top = 0;
     let height = 100;
 
-    if (startDateNum >= colStartDateNum && startDateNum < colEndDateNum) {
+    if (startDateNum > colStartDateNum && startDateNum < colEndDateNum) {
         top = ch.minsBetweenTimes(colStartDate.time, regEvent.startTime)/60/24*100;
-        if (endDateNum >= colStartDateNum && endDateNum < colEndDateNum) {
+        if (endDateNum > colStartDateNum && endDateNum < colEndDateNum) {
             height = ch.minsBetweenTimes(regEvent.startTime, regEvent.endTime)/60/24*100;
         }
         else {
@@ -31,11 +31,11 @@ const SingleEventElem = ({regEvent, weekNum, col}) => {
         }
     }
     else{
-        if (endDateNum >= colStartDateNum && endDateNum < colEndDateNum) {
+        if (endDateNum > colStartDateNum && endDateNum < colEndDateNum) {
             height = ch.minsBetweenTimes(colStartDate.time, regEvent.endTime)/60/24*100;
         }
         else {
-            if (!(startDateNum < colStartDateNum && endDateNum >= colEndDateNum)){
+            if (!(startDateNum < colStartDateNum && endDateNum > colEndDateNum)){
                 return ;
             }
         }

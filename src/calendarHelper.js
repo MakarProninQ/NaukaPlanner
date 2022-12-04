@@ -56,7 +56,7 @@ export function hourText(hour) { //0-24
 export function from24To12(time) { //hh:mm
     const hour = time.split(":")[0];
     let min = time.split(":")[1];
-    if (parseInt(min)/10 === 0){
+    if (parseInt(min)/10 === 0 && min !== "00"){
         min += "0";
     }
     let text;

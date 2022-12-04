@@ -10,7 +10,7 @@ const EventTextElem = ({regEvent, weekNum, col}) => {
 
     const colStartDate = ch.slotToTimeAndDate(1, col, weekNum);
     const colStartDateNum = ch.dateAndTimeToNum(colStartDate.date, colStartDate.time);
-    let colEndDate = "";
+    let colEndDate = null;
     if (col === 7){
         colEndDate = ch.slotToTimeAndDate(1, 1, weekNum + 1);
     }
@@ -31,17 +31,37 @@ const EventTextElem = ({regEvent, weekNum, col}) => {
     top = top - (1/48)*100;
 
     if (top < 0){
-        return;
+        if (ch.minsBetweenTimes(colStartDate.time, regEvent.endTime)/60/24*100 < 1/48*100){
+            return;
+        }
+        else {
+            top = 0;
+        }
     }
 
     if(top > 100 - (1/24*100)) {
-        return;
+        if (ch.minsBetweenTimes(regEvent.startTime, colEndDate.time)/60/24*100 < 1/48*100){
+            return;
+        }
+        if (ch.minsBetweenTimes(regEvent.startTime, colEndDate.time)/60/24*100 < 1/24*100)
+        {
+            top = (47/48) * 100;
+        }
+        else {
+            top = (23/24) * 100;
+        }
     }
 
     const singleSlotVH = 91.6 / 16.5;
     const gridHeightVH = (singleSlotVH * 24);
 
-    const height = ch.minsBetweenTimes(regEvent.startTime, regEvent.endTime)/60/24*100;
+    let height = ch.minsBetweenTimes(regEvent.startTime, regEvent.endTime)/60/24*100;
+    if (Math.floor(ch.dateAndTimeToNum(regEvent.startDate, regEvent.startTime)/10000) === Math.floor(colEndDateNum/10000)){
+        height = Math.min(height, ch.minsBetweenTimes(regEvent.startTime, colEndDate.time)/60/24*100);
+    }
+    if (Math.floor(ch.dateAndTimeToNum(regEvent.endDate, regEvent.endTime)/10000) === Math.floor(colStartDateNum/10000)){
+        height = Math.min(height, ch.minsBetweenTimes(colStartDate.time, regEvent.endTime)/60/24*100);
+    }
 
     if (height >= 1/24*99){
         return (
@@ -55,7 +75,7 @@ const EventTextElem = ({regEvent, weekNum, col}) => {
     if (height >= 1/48*99){
         return (
             <div id={`event-text-${regEvent.id}`} key={`event-text-${regEvent.id}`} className="event-text" 
-            style={{top: `${gridHeightVH * top / 100 + singleSlotVH}vh`, lineHeight: `${91.6 / 16.5}vh`}}>
+            style={{top: `${gridHeightVH * top / 100 + singleSlotVH}vh`}}>
                 {`${regEvent.name}`}
             </div>
         );
