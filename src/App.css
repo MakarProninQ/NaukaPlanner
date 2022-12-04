@@ -221,7 +221,7 @@ body {
 
 .event-elem {
   overflow: hidden;
-  left: 2%;
+  left: calc(2%-1px);
   width: 96%;
   position: absolute;
   border-radius: calc((91.6vh) / 33);
