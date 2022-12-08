@@ -47,11 +47,11 @@ const SingleEventElem = ({regEvent, weekNum, col}) => {
     return (
         <div className={`event-elem event-elem-${regEvent.id} ${regEvent.type}-event`} id={`event-elem-${regEvent.id}-${col}`}
         key={`event-elem-${regEvent.id}-${col}`} style={{
-            height: `${gridHeightVH * height / 100}vh`,
+            height: `${gridHeightVH * (height-0.2) / 100}vh`,
             top: `${gridHeightVH * top / 100 + singleSlotVH}vh`
         }}>
             <div className={`prgress-bar progress-bar-${regEvent.type}`} style={{
-                height: `${gridHeightVH * height / 100}vh`,
+                height: `${gridHeightVH * (height-0.2) / 100}vh`,
                 width: `${regEvent.progressBar}%`
             }}></div>
         </div>

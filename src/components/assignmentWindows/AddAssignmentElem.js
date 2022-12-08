@@ -29,8 +29,8 @@ const AddAssignmentElem = ({eventsObj, setEventsObj, popUp, setPopUp}) => {
   }
 
   const saveButtonClicked = () => {
-    //random should be removed
-    const newEvent = {id: Math.random().toString(), name: nameIn, type: typeIn, dueTime: dueTimeIn, dueDate: dueDateIn, class: classIn, compl: parseInt(completIn),
+    //id should be updated
+    const newEvent = {id: `${nameIn}-${Math.random()}`, name: nameIn, type: typeIn, dueTime: dueTimeIn, dueDate: dueDateIn, class: classIn, compl: parseInt(completIn),
     difficult: parseInt(difficultIn), link: linkIn, notes: notesIn};
     setEventsObj(eventsHelper.addEvent(eventsObj, newEvent));
     setPopUp({show: false, type: null, eventId: null});

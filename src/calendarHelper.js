@@ -143,3 +143,33 @@ export function addDaysToDate(date, daysNum) {
     const result = new Date(date.getFullYear(), date.getMonth(), date.getDate() + daysNum, date.getHours(), date.getMinutes());
     return result;
 }
+
+export function minsBetweenDateObjs(dateObj1, dateObj2) {
+    const mins = (dateObj2 - dateObj1)/60000;
+    return mins;
+}
+
+export function dateObjToNum(dateObj) {
+    const dateStr = dateToStr(dateObj);
+    const dateNum = dateAndTimeToNum(dateStr.date, dateStr.time);
+    return dateNum;
+}
+
+export function addMinsToDate(dateObj, minsNum) {
+    const result = new Date(dateObj.getFullYear(), dateObj.getMonth(), dateObj.getDate(), dateObj.getHours(), dateObj.getMinutes() + minsNum);
+    return result;
+}
+
+export function numToDateObj(num) {
+    const min = num%100;
+    num /= 100;
+    const hour = num%100;
+    num /= 100;
+    const date = num%100;
+    num /= 100;
+    const month = num%100 - 1;
+    num /= 100;
+    const year = num;
+    const dateObj = new Date(year, month, date, hour, min);
+    return dateObj;
+}

@@ -28,8 +28,6 @@ const EventTextElem = ({regEvent, weekNum, col}) => {
         return ;
     }
 
-    top = top - (1/48)*100;
-
     if (top < 0){
         if (ch.minsBetweenTimes(colStartDate.time, regEvent.endTime)/60/24*100 < 1/48*100){
             return;
@@ -63,7 +61,9 @@ const EventTextElem = ({regEvent, weekNum, col}) => {
         height = Math.min(height, ch.minsBetweenTimes(colStartDate.time, regEvent.endTime)/60/24*100);
     }
 
+
     if (height >= 1/24*99){
+        top = top - 1/48*100;
         return (
             <div id={`event-text-${regEvent.id}`} key={`event-text-${regEvent.id}`} className="event-text" 
             style={{top: `${gridHeightVH * top / 100 + singleSlotVH}vh`}}>
@@ -73,6 +73,7 @@ const EventTextElem = ({regEvent, weekNum, col}) => {
     }
 
     if (height >= 1/48*99){
+        top = top - 1/96*100;
         return (
             <div id={`event-text-${regEvent.id}`} key={`event-text-${regEvent.id}`} className="event-text" 
             style={{top: `${gridHeightVH * top / 100 + singleSlotVH}vh`}}>
