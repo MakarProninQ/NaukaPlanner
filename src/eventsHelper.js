@@ -21,6 +21,9 @@ function singleEventToRegEvents(event){
             const regEvent = {id: `${event.id}-${day}`, type: event.type, name: event.name, progressBar: 0};
             const curStartDate = ch.addDaysToDate(startDate, day);
             const curEndDate = ch.addDaysToDate(endDate, day);
+            if(curStartDate > endDate){
+                break;
+            }
             if(event.day[curStartDate.getDay()] === true){
                 regEvent["startDate"] = ch.dateToStr(curStartDate).date;
                 regEvent["startTime"] = ch.dateToStr(curStartDate).time;
@@ -37,6 +40,9 @@ function singleEventToRegEvents(event){
             const regEvent = {id: `${event.id}-${day}`, type: event.type, name: event.name, progressBar: 0};
             const curStartDate = ch.addDaysToDate(startDate, day);
             const curEndDate = ch.addDaysToDate(endDate, day);
+            if(curStartDate > endDate){
+                break;
+            }
             if(event.day[curStartDate.getDay()] === true){
                 regEvent["startDate"] = ch.dateToStr(curStartDate).date;
                 regEvent["startTime"] = ch.dateToStr(curStartDate).time;

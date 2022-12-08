@@ -8,13 +8,15 @@ const AddAssignmentElem = ({eventsObj, setEventsObj, popUp, setPopUp}) => {
   const [dueTimeIn, setDueTimeIn] = useState('');
   const [dueDateIn, setDueDateIn] = useState('');
   const [classIn, setClassIn] = useState('');
-  const [completIn, setCompletIn] = useState(0);
+  const [completIn, setCompletIn] = useState(50);
   const [difficultIn, setDifficultIn] = useState(50);
   const [linkIn, setLinkIn] = useState('');
   const [notesIn, setNotesIn] = useState('');
 
   const nameChange = event => {setNameIn(event.target.value)};
-  const typeChange = event => {setTypeIn(event.target.value)};
+  const typeChange = event => {
+    setPopUp({show: true, type: `add-${event.target.value}`, eventId: null});
+  };
   const dueTimeChange = event => {setDueTimeIn(event.target.value)};
   const dueDateChange = event => {setDueDateIn(event.target.value)};
   const classChange = event => {setClassIn(event.target.value)};
@@ -74,7 +76,7 @@ const AddAssignmentElem = ({eventsObj, setEventsObj, popUp, setPopUp}) => {
         <button className="button-class button3" name="save" id="save" onClick={saveButtonClicked}>SAVE</button>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default AddAssignmentElem;

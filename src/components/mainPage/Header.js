@@ -3,7 +3,7 @@ import * as eventsHelper from "../../eventsHelper";
 const Header = ({eventsObj, setEventsObj, popUp, setPopUp}) => {
 
     const addEventClicked = () => {
-        setPopUp({show: true, type: "addAssignment", eventId: null});
+        setPopUp({show: true, type: "add-assignment", eventId: null});
     };
 
     const suggestionsClicked = () => {

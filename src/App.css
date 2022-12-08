@@ -340,7 +340,7 @@ body {
 }
 
 .form-label {
-  grid-column: 1 / 1;
+  grid-column: 1 / 1 ;
   padding: 10%;
 
   font-family: 'Segoe UI';
@@ -528,4 +528,211 @@ input[type="range"]:focus {
 
 #notes {
   text-align: left;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.startdate {
+  grid-column: 2/2;
+  margin-right: 10%;
+}
+
+.enddate {
+  grid-column: 3/3;
+}
+
+#timeDash{
+  position: absolute;
+  width: 10px;
+  left: 315px;
+  height: 30px;
+  top: 164px;
+
+  font-family: 'Inter';
+  font-style: italic;
+  font-weight: 200;
+  font-size: 18px;
+  text-align: center;
+
+  color: #6C6C6C;
+
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#sunday{
+  position: absolute;
+  top: 240px;
+  left: 150px;
+  visibility: hidden;
+}
+#monday{
+  position: absolute;
+  top: 240px;
+  left: 200px;
+  visibility: hidden;
+}
+#tuesday{
+  position: absolute;
+  top: 240px;
+  left: 250px;
+  visibility: hidden;
+}
+#wednesday{
+  position: absolute;
+  top: 240px;
+  left: 300px;
+  visibility: hidden;
+}
+#thursday{
+  position: absolute;
+  top: 240px;
+  left: 350px;
+  visibility: hidden;
+}
+#friday{
+  position: absolute;
+  top: 240px;
+  left: 400px;
+  visibility: hidden;
+}
+#saturday{
+  position: absolute;
+  top: 240px;
+  left: 450px;
+  visibility: hidden;
+}
+#sundayT{
+  position: absolute;
+  top: 200px;
+  left: 160px;
+}
+#mondayT{
+  position: absolute;
+  top: 200px;
+  left: 209px;
+}
+#tuesdayT{
+  position: absolute;
+  top: 200px;
+  left: 258px;
+}
+#wednesdayT{
+  position: absolute;
+  top: 200px;
+  left: 307px;
+}
+#thursdayT{
+  position: absolute;
+  top: 200px;
+  left: 356px;
+}
+#fridayT{
+  position: absolute;
+  top: 200px;
+  left: 405px;
+}
+#saturdayT{
+  position: absolute;
+  top: 200px;
+  left: 454px;
+}
+#sunday:checked ~ label[for="sunday"],
+#monday:checked ~ label[for="monday"],
+#tuesday:checked ~ label[for="tuesday"],
+#wednesday:checked ~ label[for="wednesday"],
+#thursday:checked ~ label[for="thursday"],
+#friday:checked ~ label[for="friday"],
+#saturday:checked ~ label[for="saturday"] {
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1) inset;
+  color: black;
+}
+
+input[type="checkbox"] + label{
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  margin-top: 20px;
+  border: 1px solid #ddd;
+  line-height: 32px;
+  cursor: pointer;
+
+  font-family: 'Inter';
+  font-style: italic;
+  border-radius: 100%;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+
+  color: #6C6C6C;
+}
+
+#weekDash{
+  position: absolute;
+  width: 10px;
+  left: 315px;
+  height: 30px;
+  top: 293px;
+
+  font-family: 'Inter';
+  font-style: italic;
+  font-weight: 200;
+  font-size: 18px;
+  text-align: center;
+
+  color: #6C6C6C;
+
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+
+.my-form2 {
+  display: grid;
+  grid-template-columns: 27% 29% 29%;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 5fr;
+  row-gap: 1%;
+}
+
+.button-list2 {
+  display: grid;
+  grid-template-columns: 27% 29% 29%;
+  grid-row: 100%;
 }
