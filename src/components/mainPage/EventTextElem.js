@@ -63,7 +63,12 @@ const EventTextElem = ({regEvent, weekNum, col}) => {
 
 
     if (height >= 1/24*99){
-        top = top - 1/48*100;
+        if (top >= 1/48*100){
+            top = top - 1/48*100;
+        }
+        else{
+            top = 0;
+        }
         return (
             <div id={`event-text-${regEvent.id}`} key={`event-text-${regEvent.id}`} className="event-text" 
             style={{top: `${gridHeightVH * top / 100 + singleSlotVH}vh`}}>
@@ -72,8 +77,13 @@ const EventTextElem = ({regEvent, weekNum, col}) => {
         );
     }
 
-    if (height >= 1/48*99){
-        top = top - 1/96*100;
+    if (height >=  1/48*99){
+        if (top >= 1/96*100){
+            top = top - 1/96*100;
+        }
+        else {
+            top = 0;
+        }
         return (
             <div id={`event-text-${regEvent.id}`} key={`event-text-${regEvent.id}`} className="event-text" 
             style={{top: `${gridHeightVH * top / 100 + singleSlotVH}vh`}}>

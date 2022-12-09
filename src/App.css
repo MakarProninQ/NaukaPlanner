@@ -266,7 +266,7 @@ body {
 }
 
 .progress-bar-deadline {
-  background-color: rgba(255, 0, 46, 0.4)
+  background-color: rgba(255, 0, 46, 0.1);
 }
 
 #arrow-right{
@@ -483,29 +483,29 @@ input[type="range"]:focus {
 
 /* Chrome, Safari, Opera, and Edge Chromium */
 .slider-completion:focus::-webkit-slider-thumb {
-  box-shadow: 0px 0.5px 5px rgba(0, 0, 0, 0.3) inset, -300px 0 0 292px rgba(255, 0, 46, 0.6);
+  box-shadow: 0px 0.5px 5px rgba(0, 0, 0, 0.1) inset, -300px 0 0 292px rgba(255, 0, 46, 0.15);
 }
 
 /* Firefox */
 .slider-completion:focus::-moz-range-thumb {
-  box-shadow: 0px 0.5px 5px rgba(0, 0, 0, 0.3) inset, -300px 0 0 292px rgba(255, 0, 46, 0.6);
+  box-shadow: 0px 0.5px 5px rgba(0, 0, 0, 0.1) inset, -300px 0 0 292px rgba(255, 0, 46, 0.15);
 }
 
 .slider-difficulty:focus::-webkit-slider-thumb {
-  box-shadow: 0px 0.5px 5px rgba(0, 0, 0, 0.3) inset, -300px 0 0 292px rgba(135, 0, 199, 0.4);
+  box-shadow: 0px 0.5px 5px rgba(0, 0, 0, 0.1) inset, -300px 0 0 292px rgba(135, 0, 199, 0.15);
 }
 
 /* Firefox */
 .slider-difficulty:focus::-moz-range-thumb {
-  box-shadow: 0px 0.5px 5px rgba(0, 0, 0, 0.3) inset, -300px 0 0 292px rgba(135, 0, 199, 0.4);
+  box-shadow: 0px 0.5px 5px rgba(0, 0, 0, 0.1) inset, -300px 0 0 292px rgba(135, 0, 199, 0.15);
 }
 
 .slider-completion::-webkit-slider-thumb{
-  box-shadow: 0px 0.5px 5px rgba(0, 0, 0, 0.1), -300px 0 0 292px rgba(255, 0, 46, 0.6);
+  box-shadow: 0px 0.5px 5px rgba(0, 0, 0, 0.1), -300px 0 0 292px rgba(255, 0, 46, 0.15);
 }
 
 .slider-difficulty::-webkit-slider-thumb{
-  box-shadow: 0px 0.5px 5px rgba(0, 0, 0, 0.1), -300px 0 0 292px rgba(135, 0, 199, 0.4);
+  box-shadow: 0px 0.5px 5px rgba(0, 0, 0, 0.1), -300px 0 0 292px rgba(135, 0, 199, 0.15);
 }
 
 /***** End Styling for Sliders *****/
