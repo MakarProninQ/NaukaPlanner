@@ -17,7 +17,7 @@ function singleEventToRegEvents(event){
     if (event.type === "class"){
         const startDate = ch.dateAndTimeToDateObj(event.startWeek, event.startTime);
         const endDate = ch.dateAndTimeToDateObj(event.endWeek, event.endTime);
-        for (let day = 0; day < 7 * 10; ++day){
+        for (let day = 0; day < 7 * 52; ++day){
             const regEvent = {id: `${event.id}-${day}`, type: event.type, name: event.name, progressBar: 0};
             const curStartDate = ch.addDaysToDate(startDate, day);
             const curEndDate = ch.addDaysToDate(endDate, day);
@@ -243,21 +243,15 @@ export function updateSuggs(oldEventsObj) {
                 
                 let startStr = null;
                 let endStr = null;
-                console.log("0:", freeSlots[i]);
                 if (ch.minsBetweenDateObjs(ch.numToDateObj(freeSlots[i].start), ch.numToDateObj(freeSlots[i].end)) >= 90){
-                    console.log("1:", freeSlots[i]);
                     if (ch.minsBetweenDateObjs(ch.numToDateObj(freeSlots[i].start), ch.numToDateObj(freeSlots[i].end)) < reqMinsPerDay - takenMinsPerDay + 30){
-                        console.log("2:", freeSlots[i]);
                         startStr = ch.dateToStr(ch.addMinsToDate(ch.numToDateObj(freeSlots[i].start), 15));
                         endStr = ch.dateToStr(ch.addMinsToDate(ch.numToDateObj(freeSlots[i].end), -15));
                         takenMinsPerDay = ch.minsBetweenDateObjs(ch.numToDateObj(freeSlots[i].start), ch.numToDateObj(freeSlots[i].end)) - 30;
                     }
                     else{
-                        console.log("3:", freeSlots[i]);
                         startStr = ch.dateToStr(ch.addMinsToDate(ch.numToDateObj(freeSlots[i].start), 15));
-                        console.log(reqMinsPerDay, takenMinsPerDay);
                         endStr = ch.dateToStr(ch.addMinsToDate(ch.numToDateObj(freeSlots[i].start), 15 + reqMinsPerDay - takenMinsPerDay));
-                        console.log(startStr, endStr);
                         takenMinsPerDay = reqMinsPerDay;
                     }
                     newSugg.startDate = startStr.date;
@@ -265,14 +259,11 @@ export function updateSuggs(oldEventsObj) {
                     newSugg.endDate = endStr.date;
                     newSugg.endTime = endStr.time;
                     if (ch.dateAndTimeToDateObj(newSugg.startDate, newSugg.startTime) < ch.dateAndTimeToDateObj(assign.dueDate, assign.dueTime)){
-                        console.log("4:", freeSlots[i]);
                         if (ch.dateAndTimeToDateObj(newSugg.endDate, newSugg.endTime) > ch.dateAndTimeToDateObj(assign.dueDate, assign.dueTime)){
-                            console.log("5:", freeSlots[i]);
                             newSugg.endDate = assign.dueDate;
                             newSugg.endTime = assign.dueTime;
                         }
                         if (ch.minsBetweenDateObjs(ch.dateAndTimeToDateObj(newSugg.startDate, newSugg.startTime), ch.dateAndTimeToDateObj(newSugg.endDate, newSugg.endTime)) > 1){
-                            console.log("6:", freeSlots[i]);
                             newEventsObj.eventsArr.push(newSugg);
                             freeSlots[i].start = ch.dateObjToNum(ch.dateAndTimeToDateObj(newSugg.endDate, newSugg.endTime));
                         }
