@@ -13,7 +13,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start-build": "serve -s build",
+    "start-build": "yarn global add serve && serve -s build",
     "start": "react-scripts start",
     "build": "yarn install && react-scripts build",
     "test": "react-scripts test",
