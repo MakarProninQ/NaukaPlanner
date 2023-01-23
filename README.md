@@ -1,4 +1,4 @@
-# NaukaPlanner
+# NaukaPlanner (Unfinished Project)
  
 # Render Link (Cloud Application Hosting): https://naukaplanner-webapp.onrender.com
 
